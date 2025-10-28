@@ -1,8 +1,10 @@
 # TEST MAIN README
 
- This will be the wiki that will contain each cheatsheet with their respective most important labs.
+This wiki contains each cheatsheet along with its respective most important labs.
 
- Each topic has their own cheatsheet / methodolgy, most important labs, resources...
+Each topic includes its own cheatsheet/methodology, the most relevant labs, and useful resources.
+
+>⭐This is the result of months of work — I hope you find it helpful. If you do, please leave a star. ⭐
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 
@@ -12,9 +14,12 @@
 
 - [Burpsuite cheatsheet & tricks](/03-Extra/Burpsuite-CHEATSHEET.md)
 
-  <br>
+<br>
 
->❗This repository contains **my own** cheatsheets and methodologies for the exam — **not PortSwigger's**. You may consult PortSwigger's resources if you wish, but the files here are my personal notes.❗
+> ❗This repository contains **my own** cheatsheets and methodologies for the exam — **not PortSwigger's**. You may consult PortSwigger's resources if you wish, but the files here are my personal notes.
+
+> ❗I highly recommend creating **your own** cheatsheets. This repository is intended to help others, provide examples, show the overall organization, and demonstrate my work and methodologies.
+
 <br>
 The following links from PortSwigger may be useful:
 
@@ -38,6 +43,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 ##### Authentication
 
+- [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
 
 ### PHASE 2
