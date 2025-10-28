@@ -1,6 +1,6 @@
 # Username enumeration via response timing  + ip blocked bypass via X-Fowarded-For
 
-En este laboratorio conseguimos la contraseña mediante la respuesta del Response Time / Response Time Completed.
+In this lab we recover the password by observing the Response Time / Response Time Completed.
 
 >Workflow - Pitchfork attack:
 
@@ -14,3 +14,4 @@ En este laboratorio conseguimos la contraseña mediante la respuesta del Respons
 ![Screenshot1](/04-Screenshots/response-time-long-pass1.png)
 
 ![Screenshot2](/04-Screenshots/response-time-long-pass2.png)
+
