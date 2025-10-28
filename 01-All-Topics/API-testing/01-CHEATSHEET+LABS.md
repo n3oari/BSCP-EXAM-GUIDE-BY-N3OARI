@@ -2,15 +2,17 @@
 
 ```
 - Burp Extension -> Content-Type Converter
-- https://github.com/chrislockard/api_wordlist
 ```
 
 #### Most imporant labs
 
 [Finding-and-exploiting-an-unused-API-endpoint](Finding-and-exploiting-an-unused-API-endpoint.md)
+
 [Exploiting-a-mass-assignament-vulnerability-(hidden-parameter-fields)](Exploiting-a-mass-assignament-vulnerability-(hidden-parameter-fields).md)
 
 #### Methodology
+
+[api-wordlist-repo](https://github.com/chrislockard/api_wordlist)
 
 ```
 - Recon ->
