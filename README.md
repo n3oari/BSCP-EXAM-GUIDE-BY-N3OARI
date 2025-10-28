@@ -24,3 +24,5 @@ This will be the wiki that will contain each cheatsheet with their respective mo
 
 
 [OAuth](All-Topics/OAuth/01-CHEATSHEET+LABS.md)
+
+[API testing / recon](All-Topics/API-testing/01-CHEATSHEET+LABS.md)
