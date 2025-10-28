@@ -9,11 +9,13 @@ Burp Macros
 ```
 
 ## Most important labs
-- [1]()
 
-- [2]()
+- [Username-enumeration-via-response-timing+ip-blocked-bypass-via-X-Fowarded-For](Username-enumeration-via-response-timing+ip-blocked-bypass-via-X-Fowarded-For.md)
+  
+- [Brute-forcing-a-stay-logged-in-cookie-(cookie-easy-to-reproduce-username+md5+b64)](Brute-forcing-a-stay-logged-in-cookie-(cookie-easy-to-reproduce-username+md5+b64).md)
 
-  <br>
+- [Offline-password-cracking](Offline-password-cracking.md)
+
 
  ## Metodology
 <br>
@@ -65,4 +67,5 @@ Cookie predecible?
 - json? -> try an array of password = brute force en una sola request, eg -> {"username":"carlos","password":["foo1","foo2","foo3..."]} 
 - IP based block? -> Pitchforked attack ->  X-Forwarded-For: <IP-INTRUDER+1> + <USERNAME> + <PASSWORD> 
 ```
+
 
