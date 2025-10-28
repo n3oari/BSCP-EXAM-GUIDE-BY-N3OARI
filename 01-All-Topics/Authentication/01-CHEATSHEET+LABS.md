@@ -46,7 +46,7 @@ Burp Macros
 ```
 <br>
 
-Cookie predecible?
+> Cookie predecible?
 ```
     -> <username>:<password-hash> base64
     -> <username>:<password+timestamp-hash>
@@ -62,10 +62,11 @@ Cookie predecible?
 ```
 <br>
 
-> LOGIN BLOCKED
+> LOGIN BLOCKED?
 ```
 - json? -> try an array of password = brute force en una sola request, eg -> {"username":"carlos","password":["foo1","foo2","foo3..."]} 
 - IP based block? -> Pitchforked attack ->  X-Forwarded-For: <IP-INTRUDER+1> + <USERNAME> + <PASSWORD> 
 ```
+
 
 
