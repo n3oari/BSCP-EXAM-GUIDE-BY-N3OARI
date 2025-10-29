@@ -1,4 +1,4 @@
-# OAuth CHEATSHEET + IMPORTANT LABS
+# OAuth - CHEATSHEET + IMPORTANT LABS
 
 ## Key Terms
 ```

@@ -85,13 +85,8 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 ### PHASE 2 → Elevate Privileges 
 
 
-
-
-
-
-
-
-
 - [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
 
 ### PHASE 3 → Exfiltrate Data
+
+- [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)

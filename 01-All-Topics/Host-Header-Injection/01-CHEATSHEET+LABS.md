@@ -1,3 +1,4 @@
+# Host Header Injection - CHEATSHEET + IMPORTANT LABS
 ## Key Terms
 
 ```bash
@@ -11,7 +12,7 @@
 
 - [SSRF via arbitraty host + EXTRA lab: absolute path](SSRF-via-arbitraryhost-and-absolute-path.md)
 
-- [SSRF-via-host-validation-bypass-via-connection-state-attack](SSRF-via-host-validation-bypass-via-connection-state-attack.md)
+- [SSRF-via-host-validation-bypass-via-connection-state-attack](SSRF-via-host-validation-bypass-via-connection-state-attack.md) ❗
 
 
 ## Metodology
