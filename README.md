@@ -6,6 +6,10 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 >⭐This is the result of months of work — I hope you find it helpful. If you do, please leave a star. ⭐
 
+
+![Screenshot1](/04-Screenshots/obsidian.png)
+
+
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 
 - [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
