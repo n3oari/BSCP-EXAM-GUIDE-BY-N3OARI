@@ -16,11 +16,11 @@
 ## Most important labs
 
 
-- [CSRF bypassing SameSite=Strict restriction via redirect + path traversal + CSRF](SameSite-Strict-bypass-via-client--side-redirect(Redirect+Path-Traversal+CSRF).md)
+- [CSRF bypassing SameSite=Strict restriction via redirect + path traversal + CSRF](CSRF-bypass-SameSite-Strict-via-redirect-path-traversal.md)
 
-- [CSRF bypassing SameSite=Lax via method spoofing](SameSite-Lax-bypass-via-method-override-(method-spoofing).md)
+- [CSRF bypassing SameSite=Lax via method spoofing](CSRF-bypass-SameSite-Lax-via-method-spoofing.md)
 
-- [CSRF via Header Injection In Duplicated Cookie (csrf+cstfKey matches)](CSRF+Header-injection-where-token-is-tied-to-non-session-cookie.md)
+- [CSRF via Header Injection in Duplicated Cookie (SameSite-Strict bypass via client-side redirect)](CSRF-via-Header-Injection-SameSite-Strict-client-side-redirect.md)
 
 
 ## Metodology
