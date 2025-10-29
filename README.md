@@ -4,11 +4,15 @@ This wiki contains each cheatsheet along with its respective most important labs
 
 Each topic includes its own cheatsheet/methodology, the most relevant labs, and useful resources.
 
+<br>
+
 >⭐This is the result of months of work — I hope you find it helpful. If you do, please leave a star. ⭐
 
+<br>
 
-![Screenshot1](/04-Screenshots/obsidian.png)
+![Screenshot1](/04-Screenshots/obsidian.png) 
 
+<br>
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 
@@ -41,6 +45,30 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
   - 2: Elevate privileges or compromising the administrator account.
   - 3: Exfiltrate contents of /home/carlos/secret and **submit solution**
 
+ <br>
+
+> ⚠️ This is a reference — please, always verify and research on your own.
+
+<br>
+
+<div align="center">
+
+| Category  | Stage 1 | Stage 2 | Stage 3 |
+|:--------:|:-------:|:-------:|:-------:|
+| XSS      |   ✔️    |     ✔️    |         |
+| DOM |         |         |         |
+| SQLI |         |         |         |
+| CSRF |      ✔️   |     ✔️    |         |
+| SSRF |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+
+</div>
+
+<br>
+
 ### PHASE 1 → Obtain Inicial User
 
 ##### Enumeration & Web Discovery
@@ -55,6 +83,14 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 
 ### PHASE 2 → Elevate Privileges 
+
+
+
+
+
+
+
+
 
 - [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
 
