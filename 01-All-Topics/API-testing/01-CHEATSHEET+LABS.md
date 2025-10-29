@@ -12,7 +12,7 @@
 
 #### Methodology
 
-[api-wordlist-repo](https://github.com/chrislockard/api_wordlist)
+[api-wordlist-repo-by-chrislockard](https://github.com/chrislockard/api_wordlist)
 
 ```
 - Recon ->
