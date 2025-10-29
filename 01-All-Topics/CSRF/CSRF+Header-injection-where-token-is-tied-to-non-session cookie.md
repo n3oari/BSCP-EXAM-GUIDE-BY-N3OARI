@@ -10,9 +10,9 @@ In the search section, we discover that **Header Injection** can be exploited, a
 
 `?search=test%0d%0aSet-Cookie:%20<ARBITRARY-VALUE>`
 
-![Screenshot2](/04-Screenshots/CSRF+Header-injection1CHANGE.png)
+![Screenshot2](/04-Screenshots/CSRF+Header-injection1.png)
 
-![Screenshot3](/04-Screenshots/CSRF+Header-injection2CHANGE.png)
+![Screenshot3](/04-Screenshots/CSRF+Header-injection2.png)
 
 **Exploitation:**
 

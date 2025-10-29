@@ -16,11 +16,12 @@
 ## Most important labs
 
 
-- [CSRF bypassing SameSite=Strict restriction via redirect + path traversal + CSRF](SameSite-Strict-bypass-via-client--side-redirect(Redirect+Path Traversal+CSRF).md)
+- [CSRF bypassing SameSite=Strict restriction via redirect + path traversal + CSRF](SameSite-Strict-bypass-via-client--side-redirect(Redirect+Path-Traversal+CSRF).md)
 
-- [CSRF bypassing SameSite=Lax via method spoofing](SameSite-Lax-bypass-via-method-override-(method spoofing).md)
+- [CSRF bypassing SameSite=Lax via method spoofing](SameSite-Lax-bypass-via-method-override-(method-spoofing).md)
 
-- [CSRF via Header Injection In Duplicated Cookie (csrf+cstfKey matches)](CSRF+Header-injection-where-token-is-tied-to-non-session cookie.md)
+- [CSRF via Header Injection In Duplicated Cookie (csrf+cstfKey matches)](CSRF+Header-injection-where-token-is-tied-to-non-session-cookie.md)
+
 
 ## Metodology
 
@@ -37,7 +38,7 @@
 - Try remove Refered header
   ```
 
-- ![CSRF-MAP-CASES](/04-Screenshots/CSRF-map.png)
+![CSRF-MAP-CASES](/04-Screenshots/CSRF-map.png)
 
 
 #### Cheat Sheet

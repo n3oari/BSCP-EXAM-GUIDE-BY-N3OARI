@@ -35,7 +35,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
   - 2: Elevate privileges or compromising the administrator account.
   - 3: Exfiltrate contents of /home/carlos/secret and **submit solution**
 
-### PHASE 1
+### PHASE 1 → Obtain Inicial User
 
 ##### Enumeration & Web Discovery
 
@@ -46,7 +46,10 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
 
-### PHASE 2
+
+- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
+
+### PHASE 2 → Elevate Privileges 
 
 
-### PHASE 3
+### PHASE 3 → Exfiltrate Data
