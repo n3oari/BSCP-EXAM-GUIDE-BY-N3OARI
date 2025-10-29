@@ -4,11 +4,15 @@ This wiki contains each cheatsheet along with its respective most important labs
 
 Each topic includes its own cheatsheet/methodology, the most relevant labs, and useful resources.
 
+<br>
+
 >⭐This is the result of months of work — I hope you find it helpful. If you do, please leave a star. ⭐
 
+<br>
 
-![Screenshot1](/04-Screenshots/obsidian.png)
+![Screenshot1](/04-Screenshots/obsidian.png) 
 
+<br>
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 
@@ -23,6 +27,8 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 > ❗This repository contains **my own** cheatsheets and methodologies for the exam — **not PortSwigger's**. You may consult PortSwigger's resources if you wish, but the files here are my personal notes.
 
 > ❗I highly recommend creating **your own** cheatsheets. This repository is intended to help others, provide examples, show the overall organization, and demonstrate my work and methodologies.
+
+> ❗This repository is a summary of all my Obsidian notes for the BSCP. I learned a lot while creating it because I focused on making it as clear and didactic as possible, fully internalizing all the concepts to be able to explain them correctly. This repo was created **before passing the exam**.
 
 <br>
 The following are basic resources offered by PortSwigger for the exam:
@@ -39,6 +45,30 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
   - 2: Elevate privileges or compromising the administrator account.
   - 3: Exfiltrate contents of /home/carlos/secret and **submit solution**
 
+ <br>
+
+> ⚠️ This is a reference — please, always verify and research on your own.
+
+<br>
+
+<div align="center">
+
+| Category  | Stage 1 | Stage 2 | Stage 3 |
+|:--------:|:-------:|:-------:|:-------:|
+| XSS      |   ✔️    |     ✔️    |         |
+| DOM |         |         |         |
+| SQLI |         |         |         |
+| CSRF |      ✔️   |     ✔️    |         |
+| SSRF |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+| X |         |         |         |
+
+</div>
+
+<br>
+
 ### PHASE 1 → Obtain Inicial User
 
 ##### Enumeration & Web Discovery
@@ -53,6 +83,14 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 
 ### PHASE 2 → Elevate Privileges 
+
+
+
+
+
+
+
+
 
 - [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
 
