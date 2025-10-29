@@ -25,7 +25,7 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 > ❗I highly recommend creating **your own** cheatsheets. This repository is intended to help others, provide examples, show the overall organization, and demonstrate my work and methodologies.
 
 <br>
-The following links from PortSwigger may be useful:
+The following are basic resources offered by PortSwigger for the exam:
 
 - [usernames wordlist](https://portswigger.net/web-security/authentication/auth-lab-usernames)  
 - [passwords wordlist](https://portswigger.net/web-security/authentication/auth-lab-passwords)  
@@ -49,11 +49,11 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
+- [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md) 
 
-
-- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
 
 ### PHASE 2 → Elevate Privileges 
 
+- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
 
 ### PHASE 3 → Exfiltrate Data
