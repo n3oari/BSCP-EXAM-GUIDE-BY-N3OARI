@@ -1,5 +1,6 @@
 # OAuth CHEATSHEET + IMPORTANT LABS
-#### Keywords key
+
+## Key Terms
 ```
 - SAML based SSO (single sign-on)
 - OpenID Connect
@@ -7,16 +8,16 @@
 	> authorization code
 	> implicit (token via browser)
 ```
-#### Most important labs
-[Forced-OAuth-profile-linking-(no-state-param+CSRF)](Forced-OAuth-profile-linking-(no-state-param+CSRF).md)
+## Most important labs
+- [Forced-OAuth-profile-linking-(no-state-param+CSRF)](Forced-OAuth-profile-linking-(no-state-param+CSRF).md)
 
-[OAuth-account-hijacking-via-redirect_uri](OAuth-account-hijacking-via-redirect_uri.md)
+- [OAuth-account-hijacking-via-redirect_uri](OAuth-account-hijacking-via-redirect_uri.md)
 
-[SSRF-via-OpenID-dynamic-client-registration](SSRF-via-OpenID-dynamic-client-registration.md)
+- [SSRF-via-OpenID-dynamic-client-registration](SSRF-via-OpenID-dynamic-client-registration.md)
 
-[Stealing-OAuth-access-tokens-via-an-open-redirect-(implicit)](Stealing-OAuth-access-tokens-via-an-open-redirect-(implicit).md)
+- [Stealing-OAuth-access-tokens-via-an-open-redirect-(implicit)](Stealing-OAuth-access-tokens-via-an-open-redirect-(implicit).md)
 
-#### Methodology
+## Methodology
 ```bash
 - Search for a specific provider and look for endpoints in the documentation
 - response_type=token? -> implicit grant
@@ -26,7 +27,7 @@
     > try arbitrary redirect
     > try path traversal
 ```
-#### Cheat Sheet
+## Cheat Sheet
 ```bash
 # OPENID CONNECT
 /.well-known/openid-configuration 
@@ -34,7 +35,7 @@
 /reg -> redirect_uris, logo_uri  -> registrar usuario + obtener client_id +  SSRF
 /client/<client_id/logo 
 ```
-#### Payloads examples
+## Payloads examples
 ```js
 <iframe src="<IP>/oauth-linking?code=STOLEN-CODE"></iframe>
 //----------------------//
