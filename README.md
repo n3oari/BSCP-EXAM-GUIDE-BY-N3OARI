@@ -1,4 +1,4 @@
-# TEST MAIN README
+# ** IN PROCESS ** README.MD
 
 This wiki contains each cheatsheet along with its respective most important labs.
 
@@ -52,41 +52,76 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 <br>
 
 <div align="center">
+  
+|         Category        | Stage 1 | Stage 2 | Stage 3 |
+| :---------------------: | :-----: | :-----: | :-----: |
+|           XSS           |    ✔️   |    ✔️   |         |
+|           DOM           |    ✔️   |    ✔️   |         |
+|           SQLI          |         |    ✔️   |    ✔️   |
+|           CSRF          |    ✔️   |    ✔️   |         |
+|           SSRF          |         |         |    ✔️   |
+|      Authentication     |    ✔️     |   ✔️      |         |
+|          OAuth          |      ✔️   |✔️         |         |
+|   OS Command Injection  |         |         |    ✔️   |
+|   Web Cache Poisoning   |    ✔️     |    ✔️     |         |
+|         LFI/RFI         |         |         |     ✔️    |
+|       File Upload       |    ❌     |         |    ✔️     |
+|       Clickjacking      |  ✔️       |     ✔️    |         |
+|  Host Header Injection  |    ✔️     |   ✔️      |         |
+|     Deserialization     |   ❌      |         |     ✔️    |
+|  HTTP Request Smuggling |     ✔️    |   ✔️     |         |
+|      API - Testing      |  ✔️       |   ✔️      |         |
+|           CORS          |    ✔️     |    ✔️    |         |
+|   Prototype Pollution   |         |         |         |
+|           JWT           |      ✔️   |    ✔️     |         |
+| GraphQL - API Endpoints |         |    ✔️     |         |
+|        XML - XXE        |    ❌     |         |   ✔️     |
+|           SSTI          |         |         |    ✔️     |
+|  Broken Access Control  |    ✔️     |   ✔️      |         |
+|  Path Traversal  |         |         |  ✔️       |
 
-| Category  | Stage 1 | Stage 2 | Stage 3 |
-|:--------:|:-------:|:-------:|:-------:|
-| XSS      |   ✔️    |     ✔️    |         |
-| DOM |         |         |         |
-| SQLI |         |         |         |
-| CSRF |      ✔️   |     ✔️    |         |
-| SSRF |         |         |         |
-| X |         |         |         |
-| X |         |         |         |
-| X |         |         |         |
-| X |         |         |         |
 
 </div>
 
 <br>
 
-### PHASE 1 → Obtain Inicial User
 
-##### Enumeration & Web Discovery
 
+
+## Enumeration & Web Discovery
+
+- Burp Scanner && Site Map && Content Discovery
 - [API testing / recon](01-All-Topics/API-testing/01-CHEATSHEET+LABS.md)
 
-##### Authentication
+### PHASE 1 → Obtain Inicial User
 
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
-- [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md) 
+- [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
+- [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
+- [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
 
+- XSS / DOM
+- HTTP Request Smuggling
 
 ### PHASE 2 → Elevate Privileges 
 
+- [SQL-Injection: obtain creds](01-All-Topics/SQL-Injection/01-CHEATSHEET+LABS.md)
+- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md) 
+- [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
 
-- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md)
+- [Authentication -> Password Reset](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
+
+- JWT
+- Prototype pollution
 
 ### PHASE 3 → Exfiltrate Data
 
+- [XML - XXE Injection](01-All-Topics/XML-XXE-Injection/01-CHEATSHEET+LABS.md)
 - [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
+- [Path Traversal](/01-All-Topics/Path-Traversal/01-CHEATSHEET+LABS.md)
+- [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.MD)
+
+- SSTI
+- File Uploads
+- Desealization Insecure
