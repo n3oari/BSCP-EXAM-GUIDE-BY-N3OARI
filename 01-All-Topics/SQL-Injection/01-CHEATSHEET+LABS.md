@@ -1,6 +1,6 @@
 # SQL INJECTION CHEATSHEET + LABS
 
-## Índice
+## Index
 - [Key Terms](#key-terms)
 - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
 - [Database Version](#database-type-version)

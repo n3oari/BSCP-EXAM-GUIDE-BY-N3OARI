@@ -1,4 +1,4 @@
-# CSRF
+# CSRF - CHEATSHEET + LABS
 
 ## Key Terms
 
@@ -13,7 +13,7 @@
 - Method spoofing -> search engine, e.g> _method=POST , @method('POST'), method=POST etc
 ```
 
-## Most important labs
+## Walkthrough - Most Important Labs
 
 
 - [CSRF bypassing SameSite=Strict restriction via redirect + path traversal + CSRF](CSRF-bypass-SameSite-Strict-via-redirect-path-traversal.md)

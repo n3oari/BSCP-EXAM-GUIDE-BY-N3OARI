@@ -8,7 +8,7 @@ X-Forwarded-Host -> <OUR-SV>
 Burp Macros
 ```
 
-## Most important labs
+## Walkthrough - Most Important Labs
 
 - [Username-enumeration-via-response-timing+ip-blocked-bypass-via-X-Fowarded-For](Username-enumeration-via-response-timing+ip-blocked-bypass-via-X-Fowarded-For.md)
   

@@ -1,16 +1,17 @@
-#### Keywords key
+# API Testing - CHEATSHEET + LABS
+## Key Terms
 
 ```
 - Burp Extension -> Content-Type Converter
 ```
 
-#### Most imporant labs
+## Walkthrough - Most Important Labs
 
 [Finding-and-exploiting-an-unused-API-endpoint](Finding-and-exploiting-an-unused-API-endpoint.md)
 
 [Exploiting-a-mass-assignament-vulnerability-(hidden-parameter-fields)](Exploiting-a-mass-assignament-vulnerability-(hidden-parameter-fields).md)
 
-#### Methodology
+## Methodology
 
 [api-wordlist-repo-by-chrislockard](https://github.com/chrislockard/api_wordlist)
 

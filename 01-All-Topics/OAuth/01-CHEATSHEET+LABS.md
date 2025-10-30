@@ -1,4 +1,4 @@
-# OAuth - CHEATSHEET + IMPORTANT LABS
+# OAuth - CHEATSHEET +  LABS
 
 ## Key Terms
 ```
@@ -8,7 +8,7 @@
 	> authorization code
 	> implicit (token via browser)
 ```
-## Most important labs
+## Walkthrough - Most Important Labs
 - [Forced-OAuth-profile-linking-(no-state-param+CSRF)](Forced-OAuth-profile-linking-(no-state-param+CSRF).md)
 
 - [OAuth-account-hijacking-via-redirect_uri](OAuth-account-hijacking-via-redirect_uri.md)

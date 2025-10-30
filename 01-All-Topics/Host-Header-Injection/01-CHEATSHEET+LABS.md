@@ -1,4 +1,4 @@
-# Host Header Injection - CHEATSHEET + IMPORTANT LABS
+# Host Header Injection - CHEATSHEET + LABS
 ## Key Terms
 
 ```bash
@@ -6,7 +6,7 @@
 	  -> guess: headers, params, body, everything!
 ```
 
-## Most important labs
+## Walkthrough - Most Important Labs
 
 - [Host-header-injection-via-web-cache-poisoning+xss](host-header-injection-via-web-cache-poisoning+xss.md)
 
