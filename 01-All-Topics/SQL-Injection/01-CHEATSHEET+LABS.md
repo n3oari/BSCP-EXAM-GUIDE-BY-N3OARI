@@ -2,16 +2,16 @@
 
 ## Índice
 - [Key Terms](#key-terms)
-- [Walkthrough - Most Important Labs](#most-important-labs)
-- [Database Version](#db-type-version)
+- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
+- [Database Version](#database-type-version)
 - [Database Content](#database-content)
 - [Union Based](#union-based)
 - [Boolean Based](#boolean-based)
 - [Time Based](#time-based)
 - [Blind Based](#blind-based)
 - [Out-of-Band](#out-of-band)
-- [Bypassing SQL Syntax](#bypassing-sql-syntax)
-- [WAF Bypass](#waf-bypass)
+- [Bypassing SQL Syntax](#bypassing-sql-sintax)
+- [WAF Auth Bypass](#waf-auth-bypass)
 - [SQL Map](#sql-map)
 
 ---
@@ -256,6 +256,7 @@ sqlmap -r <REQUEST-FROM-BURP>
 sqlmap --url="<url>" -p username --user-agent=SQLMAP --random-agent --threads=10 --risk=3 --level=5 --eta --dbms=MySQL --os=Linux --banner --is-dba --users --passwords --current-user --dbs
 
 ```
+
 
 
 
