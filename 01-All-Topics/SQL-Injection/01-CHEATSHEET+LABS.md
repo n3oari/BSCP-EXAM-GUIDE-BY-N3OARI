@@ -18,7 +18,7 @@
 
 ## Key Terms
 
-    ```bash
+ ```bash
 
     - ERROR BASED -> Uses database errors to infer data
 
@@ -259,6 +259,7 @@ sqlmap -r <REQUEST-FROM-BURP>
 sqlmap --url="<url>" -p username --user-agent=SQLMAP --random-agent --threads=10 --risk=3 --level=5 --eta --dbms=MySQL --os=Linux --banner --is-dba --users --passwords --current-user --dbs
 
 ```
+
 
 
 
