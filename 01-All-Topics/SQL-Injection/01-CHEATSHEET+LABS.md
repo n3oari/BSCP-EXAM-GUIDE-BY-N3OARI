@@ -18,6 +18,8 @@
 
 ## Key Terms
 
+    ```bash
+
     - ERROR BASED -> Uses database errors to infer data
 
     - BOOLEAN BASED -> Infers data via true/false responses
@@ -29,6 +31,7 @@
     - SQL MAP -> Automates SQLi testing and exploitation
 
     - DUAL -> Oracle single-row table for SELECT without real tables
+```
 
 ---
 

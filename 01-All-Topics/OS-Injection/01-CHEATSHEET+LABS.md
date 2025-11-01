@@ -2,7 +2,7 @@
 
 ## Cheat Sheet
 
-```
+``` bash
 - Try in all params, e.g -> <bad-email> || <command>
 - Find some path with write permissions 
 

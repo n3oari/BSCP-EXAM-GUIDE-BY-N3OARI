@@ -10,7 +10,9 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 <br>
 
-![Screenshot1](/04-Screenshots/obsidian.png) 
+<div style="text-align: center;">
+  <img src="/04-Screenshots/obsidian.png" alt="Screenshot1" width="800">
+</div>
 
 <br>
 

@@ -2,7 +2,7 @@
 
 ## Key Terms
 
-```
+```bash
 - Param Miner -> Burpsutie Extension 
 - Cache oracle -> an endpoint that reveals cache behavior 
 - Cache Buster -> Used to test the cache without affecting the website’s functionality e.g -> /?cb=x
@@ -34,7 +34,7 @@
 
 ## Metodology
 
-```
+```bash
 -- RECON -- 
 - Param Miner
 	-> Guess headers / intentar multiples 

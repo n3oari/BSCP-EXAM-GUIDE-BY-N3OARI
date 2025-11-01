@@ -68,7 +68,7 @@ Host: <YOUR-LAB>:'<a href="//<EXPLOIT-SV>/?
 ```
 
 > DIFFERENT WAYS TO WRITE LOCALHOST   
-``` 
+```bash
 > localhost
 > 127.0.0.1  
 	in decimal -> 2130706433 

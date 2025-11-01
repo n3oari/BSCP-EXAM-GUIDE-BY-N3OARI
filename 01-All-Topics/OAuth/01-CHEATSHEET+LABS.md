@@ -1,7 +1,7 @@
 # OAuth - CHEATSHEET +  LABS
 
 ## Key Terms
-```
+```bash
 - SAML based SSO (single sign-on)
 - OpenID Connect
 - OAuth Grant Types:

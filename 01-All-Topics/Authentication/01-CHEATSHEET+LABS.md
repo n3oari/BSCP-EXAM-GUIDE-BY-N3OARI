@@ -22,7 +22,7 @@ Burp Macros
 
 
 > Brute force users
-```
+```bash
  -> Cluster Bomber Attack -> Grep Extract -> e.g: invalid username/password
       -> ¿username already exists? 
       -> <USERNAME> + <VERY-LONG-PASSWORD> -> show time completed in respose
@@ -33,21 +33,21 @@ Burp Macros
 <br>
 
 > Change password?
-```  
+```  bash
   -> Brute-force the current password and in the new password field enter <pass1> <pass2>
       > If the current password is correct, it will show an error message because your new passwords do not match	
 ```
 <br>
     
 > Forgot password? 
-```
+```bash
     -> Reuse temporal token 			
 	  -> X-Forwarded-Host: <exploit-sv> -> token en nuestro email
 ```
 <br>
 
 > Cookie predecible?
-```
+```bash
     -> <username>:<password-hash> base64
     -> <username>:<password+timestamp-hash>
     -> Hash? -> find the type with tools like john-the-ripper,hashid,crackstation(online)...
@@ -55,7 +55,7 @@ Burp Macros
 <br>
 
 > 2FA?
-```
+```bash
     -> Intentar evitar la 2º verificación, ej -> 1º login + GET /my-account?username=carlos
     -> login1 (wiener) + login2 (send token to carlos) -> brute force mfa
 	  -> macro + brute force mfa
@@ -63,7 +63,7 @@ Burp Macros
 <br>
 
 > LOGIN BLOCKED?
-```
+```bash
 - json? -> try an array of password = brute force en una sola request, eg -> {"username":"carlos","password":["foo1","foo2","foo3..."]} 
 - IP based block? -> Pitchforked attack ->  X-Forwarded-For: <IP-INTRUDER+1> + <USERNAME> + <PASSWORD> 
 ```
