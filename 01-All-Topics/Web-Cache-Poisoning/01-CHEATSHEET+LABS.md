@@ -4,7 +4,7 @@
 
 ```
 - Param Miner -> Burpsutie Extension 
-- Cache oracle -> an endpoint that reveals cache behavior -> 
+- Cache oracle -> an endpoint that reveals cache behavior 
 - Cache Buster -> Used to test the cache without affecting the website’s functionality e.g -> /?cb=x
 - Unkeyed Input -> Element that does not influence the cache key (potential attack vector)
 - Cloaking Param -> Parameter/Header ignored by the cache but used by the backend eg -> /?callback=setCountryCookie&utm_content=x;callback=alert(1)
@@ -53,7 +53,6 @@
 - 5 -> Locate headers
 - 6 -> Inject a benign payload to confirm cache impact/behavior 
 
--- ** --
 
 - CORS? ->  Access-Control-Allow-Origin: *
 - Try overriding parameters (e.g., see if server accepts parameters in unexpected places, such as a GET body) — observe how the cache reacts
