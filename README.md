@@ -122,8 +122,9 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [XML - XXE Injection](01-All-Topics/XML-XXE-Injection/01-CHEATSHEET+LABS.md)
 - [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
 - [Path Traversal](/01-All-Topics/Path-Traversal/01-CHEATSHEET+LABS.md)
-- [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.MD)
+- [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.md)
 
 - SSTI
 - File Uploads
 - Desealization Insecure
+
