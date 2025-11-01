@@ -43,7 +43,7 @@
 
 ---
 
-## Cheat Sheet
+## CHEATSHEET
 
 > ❗SQL Injection has an endless variety of payloads, bypasses, and techniques. This is my cheatsheet applied to the   BSCP, but in this case I recommend checking out the payloads from [payloads-all-the-things-sqli](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection) and [portswigger-sqli](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 

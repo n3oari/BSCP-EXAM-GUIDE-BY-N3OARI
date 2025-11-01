@@ -97,13 +97,15 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 ### PHASE 1 → Obtain Inicial User
 
+- [XSS]((01-All-Topics/XSS/01-CHEATSHEET+LABS.md))
+- DOM
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
 - [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
 - [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
 
-- XSS / DOM
+
 - HTTP Request Smuggling
 
 ### PHASE 2 → Elevate Privileges 
