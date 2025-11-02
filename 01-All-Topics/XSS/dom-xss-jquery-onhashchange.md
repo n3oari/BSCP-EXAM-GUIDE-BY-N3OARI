@@ -29,4 +29,4 @@ We need to send the target one hash value plus a variation containing our XSS to
 Result:
 
 - 1 call: <IP>/#
-- 2 call <IP>/# + <img src=1 onerror=print()> = TRIGGER onhashchange 
+- 2 call <IP>/# + `<img src=1 onerror=print()>` = TRIGGER onhashchange 

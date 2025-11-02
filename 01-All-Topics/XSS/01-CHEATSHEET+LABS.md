@@ -157,10 +157,13 @@ function handleResponse() {
 
 #### SINKS-AND-SOURCES
 
+
 > SEARCH IN ** SOURCE CODE ** 
 
 > SOURCES: origins of untrusted data (inputs coming from external sources).
+
 > SINKS: points where that data can execute
+
 > E.G -> sources -> x = window.location.search() + sink -> document.write(x)
 
 SOURCES
