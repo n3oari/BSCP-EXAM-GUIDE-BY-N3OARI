@@ -5,7 +5,7 @@ In source code we found:
 - window.location.search -> source
 - document.write -> sink
 
-![Screenshot1](/04-Screenshots/dom.svg1.png)
+![Screenshot1](/04-Screenshots/dom-svg1.png)
 
 Payload:
 

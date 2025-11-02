@@ -21,7 +21,7 @@
 
 ## Walkthrough - Most Important Labs
 
-- [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md)
+- [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md) 👀
 
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md)
