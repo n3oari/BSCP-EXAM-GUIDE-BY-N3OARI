@@ -97,7 +97,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 ### PHASE 1 → Obtain Inicial User
 
-- [XSS]((01-All-Topics/XSS/01-CHEATSHEET+LABS.md))
+- [XSS](01-All-Topics/XSS/01-CHEATSHEET+LABS.md)
 - DOM
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
