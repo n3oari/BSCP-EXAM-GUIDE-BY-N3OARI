@@ -6,4 +6,5 @@
 ![Screenshot2](/04-Screenshots/dom-intruder2.png)
 
 
-![Screenshot3](/04-Screenshots/dom.intruder3.png)
+
+![Screenshot3](/04-Screenshots/dom-intruder3.png)
