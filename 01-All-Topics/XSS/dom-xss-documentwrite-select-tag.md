@@ -12,5 +12,7 @@ We found a function that uses `document.write` based on the input provided in th
 
 ![Screenshot5](/04-Screenshots/select5.png)
 
+![Screenshot5](/04-Screenshots/select6.png)
+
 
 
