@@ -1,5 +1,7 @@
 # Reflected DOM XSS eval function (escaping backslash with backslash in json)
 
+<br>
+
 We found that a call is made to the eval() function where the variable’s value depends on our input.
 
 ![Screenshot1](/04-Screenshots/eval1.png)
@@ -8,11 +10,13 @@ We found that a call is made to the eval() function where the variable’s value
 
 We tried to break the string by inserting double quotes, but they are escaped, i.e.:
 
-foo" -> foo\"
+> foo" -> foo\"
+
+<br>
 
 By supplying a backslash + double quote ourselves we can escape the server’s backslash and thus inject our double quotes:
 
-foo\" -> foo\\\" foo -> foo"foo
+> foo\" -> foo\\\" foo -> foo"foo
 
 ![Screenshot3](/04-Screenshots/eval3.png)
 

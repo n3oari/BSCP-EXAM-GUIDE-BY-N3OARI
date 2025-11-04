@@ -4,15 +4,19 @@ We found that there is a WAF using a blacklist of HTML tags
 
 Using Burp Intruder and the response status codes, we identify which tags are allowed.
 
-1: First, we find allowed tags.
+- 1: First, we find allowed tags.
 
-2: Second, we search for allowed attributes.
+- 2: Second, we search for allowed attributes.
 
-3: We create the payload.
+- 3: We create the payload.
+
+<br>
 
 ![Screenshot1](/04-Screenshots/wafbypass1.png)
 
 ![Screenshot2](/04-Screenshots/wafbypass2.png)
+
+<br>
 
 **Exploitation**
 

