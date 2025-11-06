@@ -94,6 +94,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 - Burp Scanner && Site Map && Content Discovery
 - [API testing / recon](01-All-Topics/API-testing/01-CHEATSHEET+LABS.md)
+- [Obfuscation payloads](03-Extra/obfuscating-payload.md) 👁️❗
 
 ### PHASE 1 → Obtain Inicial User
 
