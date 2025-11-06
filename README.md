@@ -74,7 +74,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 |  HTTP Request Smuggling |     ✔️    |   ✔️     |         |
 |      API - Testing      |  ✔️       |   ✔️      |         |
 |           CORS          |    ✔️     |    ✔️    |         |
-|   Prototype Pollution   |         |         |         |
+|   Prototype Pollution   |         |      ✔️   |         |
 |           JWT           |      ✔️   |    ✔️     |         |
 | GraphQL - API Endpoints |         |    ✔️     |         |
 |        XML - XXE        |    ❌     |         |   ✔️     |
@@ -99,12 +99,13 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 ### PHASE 1 → Obtain Inicial User
 
 - [XSS](01-All-Topics/XSS/01-CHEATSHEET+LABS.md)
-- DOM
+- [DOM vulnerabilities](01-All-Topics/DOM-vulnerabilities/01-CHEATSHEET+LABS.md)
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
 - [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
 - [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
+- [JWT](01-All-Topics/JWT/01-CHEATSHEET+LABS.md)
 
 
 - HTTP Request Smuggling
@@ -114,11 +115,10 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [SQL-Injection: obtain creds](01-All-Topics/SQL-Injection/01-CHEATSHEET+LABS.md)
 - [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md) 
 - [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
-
+- [Prototype Pollution](01-All-Topics/Prototype-Pollution/01-CHEATSHEET+LABS.md)
 - [Authentication -> Password Reset](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 
-- JWT
-- Prototype pollution
+
 
 ### PHASE 3 → Exfiltrate Data
 
@@ -126,8 +126,9 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
 - [Path Traversal](/01-All-Topics/Path-Traversal/01-CHEATSHEET+LABS.md)
 - [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.md)
+- [Deserialization Insecure](01-All-Topics/Deserialization/01-CHEATSHEET+LABS.md)
 
 - SSTI
 - File Uploads
-- Desealization Insecure
+
 
