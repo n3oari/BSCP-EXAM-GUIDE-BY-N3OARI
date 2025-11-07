@@ -17,11 +17,8 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 <br>
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
-
 - [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
-
 - [HTB machines I recommended for each topic](/03-Extra/HTB-machines.md)
-
 - [Burpsuite cheatsheet & tricks](/03-Extra/Burpsuite-CHEATSHEET.md)
 
 <br>
@@ -55,32 +52,32 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 <div align="center">
   
-|         Category        | Stage 1 | Stage 2 | Stage 3 |
+|        Category         | Stage 1 | Stage 2 | Stage 3 |
 | :---------------------: | :-----: | :-----: | :-----: |
-|           XSS           |    ✔️   |    ✔️   |         |
-|           DOM           |    ✔️   |    ✔️   |         |
-|           SQLI          |         |    ✔️   |    ✔️   |
-|           CSRF          |    ✔️   |    ✔️   |         |
-|           SSRF          |         |         |    ✔️   |
-|      Authentication     |    ✔️     |   ✔️      |         |
-|          OAuth          |      ✔️   |✔️         |         |
-|   OS Command Injection  |         |         |    ✔️   |
-|   Web Cache Poisoning   |    ✔️     |    ✔️     |         |
-|         LFI/RFI         |         |         |     ✔️    |
-|       File Upload       |    ❌     |         |    ✔️     |
-|       Clickjacking      |  ✔️       |     ✔️    |         |
-|  Host Header Injection  |    ✔️     |   ✔️      |         |
-|     Deserialization     |   ❌      |         |     ✔️    |
-|  HTTP Request Smuggling |     ✔️    |   ✔️     |         |
-|      API - Testing      |  ✔️       |   ✔️      |         |
-|           CORS          |    ✔️     |    ✔️    |         |
-|   Prototype Pollution   |         |      ✔️   |         |
-|           JWT           |      ✔️   |    ✔️     |         |
-| GraphQL - API Endpoints |         |    ✔️     |         |
-|        XML - XXE        |    ❌     |         |   ✔️     |
-|           SSTI          |         |         |    ✔️     |
-|  Broken Access Control  |    ✔️     |   ✔️      |         |
-|  Path Traversal  |         |         |  ✔️       |
+|           XSS           |    ✔️    |    ✔️    |         |
+|           DOM           |    ✔️    |    ✔️    |         |
+|          SQLI           |         |    ✔️    |    ✔️    |
+|          CSRF           |    ✔️    |    ✔️    |         |
+|          SSRF           |         |         |    ✔️    |
+|     Authentication      |    ✔️    |    ✔️    |         |
+|          OAuth          |    ✔️    |    ✔️    |         |
+|  OS Command Injection   |         |         |    ✔️    |
+|   Web Cache Poisoning   |    ✔️    |    ✔️    |         |
+|         LFI/RFI         |         |         |    ✔️    |
+|       File Upload       |    ❌    |         |    ✔️    |
+|      Clickjacking       |    ✔️    |    ✔️    |         |
+|  Host Header Injection  |    ✔️    |    ✔️    |         |
+|     Deserialization     |    ❌    |         |    ✔️    |
+| HTTP Request Smuggling  |    ✔️    |    ✔️    |         |
+|      API - Testing      |    ✔️    |    ✔️    |         |
+|          CORS           |    ✔️    |    ✔️    |         |
+|   Prototype Pollution   |         |    ✔️    |         |
+|           JWT           |    ✔️    |    ✔️    |         |
+| GraphQL - API Endpoints |         |    ✔️    |         |
+|        XML - XXE        |    ❌    |         |    ✔️    |
+|          SSTI           |         |         |    ✔️    |
+|  Broken Access Control  |    ✔️    |    ✔️    |         |
+|     Path Traversal      |         |         |    ✔️    |
 
 
 </div>
@@ -88,7 +85,10 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 <br>
 
 
+## Some utilities
 
+- [ALL-MY-PAYLOADS-GROUPED](03-Extra/ALL-PAYLOADS.md)
+- [REGEX explanation (util to interpreter code)](https://www.mobzystems.com/online/explain-regular-expression/)
 
 ## Enumeration & Web Discovery
 
@@ -98,8 +98,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 ### PHASE 1 → Obtain Inicial User
 
-- [XSS](01-All-Topics/XSS/01-CHEATSHEET+LABS.md)
-- [DOM vulnerabilities](01-All-Topics/DOM-vulnerabilities/01-CHEATSHEET+LABS.md)
+- [XSS / DOM vulnerabilities](01-All-Topics/XSS-AND-DOM//01-CHEATSHEET+LABS.md)
 - [Authentication / Brute-Force](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [OAuth](01-All-Topics/OAuth/01-CHEATSHEET+LABS.md)
 - [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
@@ -117,7 +116,6 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
 - [Prototype Pollution](01-All-Topics/Prototype-Pollution/01-CHEATSHEET+LABS.md)
 - [Authentication -> Password Reset](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
-
 
 
 ### PHASE 3 → Exfiltrate Data
