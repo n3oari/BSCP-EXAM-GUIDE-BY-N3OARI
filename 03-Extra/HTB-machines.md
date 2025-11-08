@@ -13,4 +13,5 @@
 - Oouch: OAuth
 ---10---
 - CrossFite: XSS -> XSS + CSRF > privilege ecalation out of scope
+- Pollution: XXE + PROTOTYPE POLLUTION
 ```

