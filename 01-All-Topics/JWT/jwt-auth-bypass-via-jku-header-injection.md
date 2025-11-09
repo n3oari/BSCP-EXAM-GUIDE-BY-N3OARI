@@ -8,12 +8,12 @@ In this lab we will exploit the **jku** parameter in a JWT header. This paramete
 ![Screenshot1](../../04-Screenshots/jku1.png)
 
 - 2: Convert the public key to JWK/JWKS and upload it to your Exploit Server (or serve it from a URL you control).
+- 
   
 ![Screenshot2](../../04-Screenshots/jku2.png)
 
-- 3:
 
-Modify the JWT header: replace the kid with the kid from your key and add jku pointing to your JWKS URL (for example https://exploit.example/jwks.json). Sign the token with your private key and send the JWT to the server.
+- 3: Modify the JWT header: replace the kid with the kid from your key and add jku pointing to your exploit server. Sign the token with your private key and send the JWT to the server.
 
 
 ![Screenshot3](../../04-Screenshots/jku3.png)
@@ -21,7 +21,7 @@ Modify the JWT header: replace the kid with the kid from your key and add jku po
 
 ```json
 
-```
+
 {
    "keys": [
 
@@ -35,4 +35,3 @@ Modify the JWT header: replace the kid with the kid from your key and add jku po
 
 ```
 
-```
