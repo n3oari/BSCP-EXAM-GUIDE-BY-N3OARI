@@ -12,6 +12,6 @@ By abusing the jwk parameter in the token header, a vulnerable server may accept
 
 - 3: Sign the JWT with our private key and send it to the server.
 
-![Screenshot3](../../04-Screenshots/jwk3.png)
+![Screenshot3](../../04-Screenshots/jkw3.png)
 
 If the server is vulnerable and uses the jwk supplied by the client to verify the signature, verification will succeed and the token will be accepted.
