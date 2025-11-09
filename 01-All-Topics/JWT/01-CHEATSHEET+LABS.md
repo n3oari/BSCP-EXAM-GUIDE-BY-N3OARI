@@ -24,13 +24,15 @@
 - [JWT auth bypass via JKU header injection](jwt-auth-bypass-via-jku-header-injection.md)
 - [JWT auth bypass via KID path traversal to /dev/null](jwt-auth-bypass-kid-path-traversal.md)
 
+<br>
+
 
 ```bash
-- Modificar el valor del payload
-- Cambiar el algorismo a none 
-- weak signature? -> brute force
-- Try inject header -> JWK or JKU
-- Try path traversal in KID to /dev/null 
+- Modify the payload value.
+- Change the alg to none.
+- Weak signature? — try brute‑forcing the secret (if the token uses a short/guessable HMAC key).
+- Try injecting header parameters — jwk (embedded key) or jku (JWKS URL).
+- Try path‑traversal on kid (e.g. point it to /dev/null).
 ```
 
 ```bash
