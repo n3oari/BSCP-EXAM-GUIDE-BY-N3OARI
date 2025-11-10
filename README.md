@@ -117,6 +117,8 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [JWT](01-All-Topics/JWT/01-CHEATSHEET+LABS.md)
 
 
+- Graphql
+
 ### PHASE 3 → Exfiltrate Data
 
 - [XML - XXE Injection](01-All-Topics/XML-XXE-Injection/01-CHEATSHEET+LABS.md)
