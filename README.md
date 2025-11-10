@@ -94,7 +94,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 - Burp Scanner && Site Map && Content Discovery
 - [API testing / recon](01-All-Topics/API-testing/01-CHEATSHEET+LABS.md)
-- [Obfuscation payloads](03-Extra/obfuscating-payload.md) 👁️❗
+- [Obfuscation payloads (escape bypass)](03-Extra/obfuscating-payload.md) 👁️❗
 
 ### PHASE 1 → Obtain Inicial User
 
@@ -104,8 +104,6 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
 - [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
-- [JWT](01-All-Topics/JWT/01-CHEATSHEET+LABS.md)
-
 
 - HTTP Request Smuggling
 
@@ -116,6 +114,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
 - [Prototype Pollution](01-All-Topics/Prototype-Pollution/01-CHEATSHEET+LABS.md)
 - [Authentication -> Password Reset](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
+- [JWT](01-All-Topics/JWT/01-CHEATSHEET+LABS.md)
 
 
 ### PHASE 3 → Exfiltrate Data
