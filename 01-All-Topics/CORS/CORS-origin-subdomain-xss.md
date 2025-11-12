@@ -4,9 +4,11 @@ In this case we are not allowed either an arbitrary value or `null` in the `Orig
 
 After verifying this, we look for a legitimate subdomain on the site. We found: `stock`
 
-This subdomain is vulnerable to `XSS`.
 
 ![Screenshot1](../../04-Screenshots/cors-subdomain1.png)
+
+
+Identify `XSS`.
 
 
 ![Screenshot2](../../04-Screenshots/cors-subdomain2.png)
