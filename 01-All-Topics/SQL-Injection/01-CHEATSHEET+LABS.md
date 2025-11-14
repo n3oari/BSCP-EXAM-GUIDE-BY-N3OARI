@@ -50,7 +50,7 @@
 
 <br>
 
-#### DATABAE-TYPE-VERSION
+#### DATABASE-TYPE-VERSION
 
 ``` sql
 SELECT version()  --> PostgreSQL 

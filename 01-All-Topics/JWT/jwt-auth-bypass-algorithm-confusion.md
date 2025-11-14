@@ -1,4 +1,4 @@
-# JWT authentication bypass via algorithm confusion
+# JWT authentication bypass via algorithm confusion (public key exposed)
 
 In this lab we found a server vulnerable to **algorithm confusion**: it **exposes** its public key at **/jwks.json** and is misconfigured so that the same public key can be abused for both RS256 (asymmetric) and HS256 (symmetric).
 

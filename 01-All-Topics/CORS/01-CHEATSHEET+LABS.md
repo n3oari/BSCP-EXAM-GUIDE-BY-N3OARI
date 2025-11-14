@@ -17,7 +17,7 @@
 - [CORS + XSS in trusted subdomains ](CORS-origin-subdomain-xss.md)
 
 
-#### Methodology
+## Methodology
 
 ```bash
 Allow-Control-Allow-Origin?
@@ -27,7 +27,7 @@ Allow-Control-Allow-Origin?
 
 ```
 
-#### Cheat Sheet
+## Cheat Sheet
 
 ```js
 // ---------- Access-Control-Allow-Origin * ---------- //
