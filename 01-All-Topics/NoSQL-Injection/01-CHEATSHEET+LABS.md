@@ -39,7 +39,9 @@ administrator' && this.password[0]=='a' || 'a'=='b'
 
 ```
 
-#### Extract unknown fields
+<br>
+
+### Extract unknown fields
 
 > **Object.keys(this)** → a native JavaScript method that returns **an array containing all enumerable keys** of an object.
 
