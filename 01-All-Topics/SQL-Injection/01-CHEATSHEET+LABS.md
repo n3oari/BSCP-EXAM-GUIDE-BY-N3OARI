@@ -2,18 +2,21 @@
 
 ## Index
 
-- [Key Terms](#key-terms)
-- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-- [Database Version](#database-type-version)
-- [Database Content](#database-content)
-- [Union Based](#union-based)
-- [Boolean Based](#boolean-based)
-- [Time Based](#time-based)
-- [Blind Based](#blind-based)
-- [Out-of-Band](#out-of-band)
-- [Bypassing SQL Syntax](#bypassing-sql-sintax)
-- [WAF Auth Bypass](#waf-auth-bypass)
-- [SQL Map](#sql-map)
+- [SQL INJECTION CHEATSHEET + LABS](#sql-injection-cheatsheet--labs)
+  - [Index](#index)
+  - [Key Terms](#key-terms)
+  - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
+  - [CHEATSHEET](#cheatsheet)
+      - [DATABASE-TYPE-VERSION](#database-type-version)
+      - [DATABASE CONTENT](#database-content)
+      - [UNION BASED](#union-based)
+      - [BOOLEAN BASED](#boolean-based)
+      - [TIME BASED](#time-based)
+      - [BLIND BASED](#blind-based)
+      - [OUT-OF-BAND](#out-of-band)
+      - [BYPASSING-SQL-SINTAX](#bypassing-sql-sintax)
+      - [WAF-AUTH-BYPASS](#waf-auth-bypass)
+      - [SQL MAP](#sql-map)
 
 ---
 
@@ -38,7 +41,7 @@
 
 ## Walkthrough - Most Important Labs
 
-- [1]()
+- [SQLI with filter WAF bypass via XML encoding using hackvertor extension](sql-waf-bypass-hackvertor.md)
 - [2]()
 - [3]()
 
