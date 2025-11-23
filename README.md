@@ -109,24 +109,22 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 - [SQL Injection](01-All-Topics/SQL-Injection/01-CHEATSHEET+LABS.md)
 - [NoSQL Injection](01-All-Topics/NoSQL-Injection/01-CHEATSHEET+LABS.md)
-- [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md) 
-- [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
+- [Client Side Request Forgery (CSRF)](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md) 
+- [Cross-Origin Resource Sharing (CORS)](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
 - [Prototype Pollution](01-All-Topics/Prototype-Pollution/01-CHEATSHEET+LABS.md)
 - [Authentication -> Password Reset](01-All-Topics/Authentication/01-CHEATSHEET+LABS.md)
 - [JWT](01-All-Topics/JWT/01-CHEATSHEET+LABS.md)
-
-
-- Graphql
+- [GraphQL API](01-All-Topics/GraphQL-API/01-CHEATSHEET+LABS.md)
 
 ### PHASE 3 → Exfiltrate Data
 
 - [XML - XXE Injection](01-All-Topics/XML-XXE-Injection/01-CHEATSHEET+LABS.md)
-- [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
+- [Server Side Request Forgery (SSRF)](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
 - [Path Traversal](/01-All-Topics/Path-Traversal/01-CHEATSHEET+LABS.md)
 - [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.md)
 - [Deserialization Insecure](01-All-Topics/Deserialization-Insecure/01-CHEATSHEET+LABS.md)
-- [File Uploads (web shell)](01-All-Topics/File-Uploads/01-CHEATSHEET+LABS.MD)
-- SSTI
+- [File Uploads (Web Shell)](01-All-Topics/File-Uploads/01-CHEATSHEET+LABS.MD)
+- [Server Side Template Injection (SSTI)](01-All-Topics/SSTI/01-CHEATSHEET+LABS.md)
 
 
 
