@@ -1,7 +1,14 @@
 # File Uploads - CHEATSHEET + LABS
 
-## Walkthrough - Most Important Labs
+- [File Uploads - CHEATSHEET + LABS](#file-uploads---cheatsheet--labs)
+	- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
+	- [Methodology](#methodology)
+	- [Cheat Sheet](#cheat-sheet)
+	- [upload-.htaccess](#upload-htaccess)
+	- [php-code-metadadata-exiftool](#php-code-metadadata-exiftool)
+	- [webshell-race-condition](#webshell-race-condition)
 
+## Walkthrough - Most Important Labs
 - [File Uploads - CHEATSHEET + LABS](#file-uploads---cheatsheet--labs)
 	- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
 	- [Methodology](#methodology)
@@ -46,6 +53,8 @@ exiftool foto.jpg -Comment='<?php echo "<pre>" . shell_exec($_GET["cmd"]) . "</p
 
 ## upload-.htaccess
 
+<br>
+
 > .htaccess → A configuration file used by the Apache HTTP Server.
 > It allows you to adjust settings at the directory level, without modifying the main httpd.conf file.
 
@@ -70,9 +79,11 @@ After defining this custom extension, we upload a file using it so that the serv
 
 ![Screenshoot3](../../04-Screenshots/htaccess3.png)
 
+<br>
 
 ## php-code-metadadata-exiftool
 
+<br>
 
 We embed PHP code within the metadata of an image file, and the resulting output is a file that the server may process according to its metadata configuratio
 
@@ -89,9 +100,11 @@ Even if the file uses a .php extension, it may still be interpreted by certain t
 
 ![Screenshoot6](../../04-Screenshots/exiftool3.png)
 
+<br>
 
 ## webshell-race-condition
 
+<br>
 
 In this lab, we observe that the server takes some time to validate whether the file extension is valid or not.
 

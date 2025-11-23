@@ -125,7 +125,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [SSRF](01-All-Topics/SSRF/01-CHEATSHEET+LABS.MD)
 - [Path Traversal](/01-All-Topics/Path-Traversal/01-CHEATSHEET+LABS.md)
 - [OS - Command Injection](/01-All-Topics/OS-Injection/01-CHEATSHEET+LABS.md)
-- [Deserialization Insecure](01-All-Topics/Deserialization/01-CHEATSHEET+LABS.md)
+- [Deserialization Insecure](01-All-Topics/Deserialization-Insecure/01-CHEATSHEET+LABS.md)
 - [File Uploads (web shell)](01-All-Topics/File-Uploads/01-CHEATSHEET+LABS.MD)
 - SSTI
 
