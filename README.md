@@ -1,4 +1,4 @@
-# ** IN PROCESS ** README.MD
+# ** IN PROCESS ** README.MD  (NOVEMBER 2026)
 
 This wiki contains each cheatsheet along with its respective most important labs.
 
@@ -10,11 +10,7 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 <br>
 
-<div style="text-align: center;">
-  <img src="/04-Screenshots/obsidian.png" alt="Screenshot1" width="800">
-</div>
 
-<br>
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 - [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
@@ -56,7 +52,8 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 | :---------------------: | :-----: | :-----: | :-----: |
 |           XSS           |    ✔️    |    ✔️    |         |
 |           DOM           |    ✔️    |    ✔️    |         |
-|          SQLI           |         |    ✔️    |    ✔️    |
+|          SQL Injection           |         |    ✔️    |    ✔️    |
+|          NoSQL Injection           |         |    ✔️    |    ✔️    |
 |          CSRF           |    ✔️    |    ✔️    |         |
 |          SSRF           |         |         |    ✔️    |
 |     Authentication      |    ✔️    |    ✔️    |         |
@@ -106,10 +103,12 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
 
 - HTTP Request Smuggling
+- Race condition
 
 ### PHASE 2 → Elevate Privileges 
 
-- [SQL-Injection: obtain creds](01-All-Topics/SQL-Injection/01-CHEATSHEET+LABS.md)
+- [SQL Injection](01-All-Topics/SQL-Injection/01-CHEATSHEET+LABS.md)
+- [NoSQL Injection](01-All-Topics/NoSQL-Injection/01-CHEATSHEET+LABS.md)
 - [CSRF](01-All-Topics/CSRF/01-CHEATSHEET+LABS.md) 
 - [CORS](01-All-Topics/CORS/01-CHEATSHEET+LABS.md)
 - [Prototype Pollution](01-All-Topics/Prototype-Pollution/01-CHEATSHEET+LABS.md)
