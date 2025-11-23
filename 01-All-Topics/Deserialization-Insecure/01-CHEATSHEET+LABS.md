@@ -18,7 +18,7 @@
 
 - [java ysoserial !! PENDIENTE !!]() 
 - [PHP deserialization in cookie with a pre-build gadget chain using phpgcc](php-des.md)
-- [Ruby deserialization in cookie using a documented gadget chain (ruby rce exploit)](php-des.md)
+- [Ruby deserialization in cookie using a documented gadget chain (ruby rce exploit)](ruby-des.md)
 
 
 ## Methodology
