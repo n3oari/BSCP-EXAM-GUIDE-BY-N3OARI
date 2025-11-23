@@ -1,21 +1,16 @@
 # File Uploads - CHEATSHEET + LABS
 
-- [File Uploads - CHEATSHEET + LABS](#file-uploads---cheatsheet--labs)
-	- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-	- [Methodology](#methodology)
-	- [Cheat Sheet](#cheat-sheet)
-	- [upload-.htaccess](#upload-htaccess)
-	- [php-code-metadadata-exiftool](#php-code-metadadata-exiftool)
-	- [webshell-race-condition](#webshell-race-condition)
+
+- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
+- [Methodology](#methodology)
+- [Cheat Sheet](#cheat-sheet)
+
 
 ## Walkthrough - Most Important Labs
-- [File Uploads - CHEATSHEET + LABS](#file-uploads---cheatsheet--labs)
-	- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-	- [Methodology](#methodology)
-	- [Cheat Sheet](#cheat-sheet)
-	- [upload-.htaccess](#upload-htaccess)
-	- [php-code-metadadata-exiftool](#php-code-metadadata-exiftool)
-	- [webshell-race-condition](#webshell-race-condition)
+- [upload-.htaccess](#upload-htaccess)
+- [php-code-metadadata-exiftool](#php-code-metadadata-exiftool)
+- [webshell-race-condition](#webshell-race-condition)
+
 
 ## Methodology
 
