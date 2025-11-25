@@ -14,7 +14,7 @@
       - [TIME BASED](#time-based)
       - [BLIND BASED](#blind-based)
       - [OUT-OF-BAND](#out-of-band)
-      - [CONCAT STRINGS](#concat-and-substring)
+      - [CONCAT AND SUBSTRING](#concat-and-substring)
       - [BYPASSING-SQL-SINTAX](#bypassing-sql-sintax)
       - [WAF-AUTH-BYPASS](#waf-auth-bypass)
       - [SQL MAP](#sql-map)
