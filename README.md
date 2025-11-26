@@ -65,7 +65,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 |       File Upload       |    ❌    |         |    ✔️    |
 |      Clickjacking       |    ✔️    |    ✔️    |         |
 |  Host Header Injection  |    ✔️    |    ✔️    |         |
-|     Deserialization     |    ❌    |         |    ✔️    |
+|     Deserialization  Insecure   |    ❌    |         |    ✔️    |
 | HTTP Request Smuggling  |    ✔️    |    ✔️    |         |
 |      API - Testing      |    ✔️    |    ✔️    |         |
 |          CORS           |    ✔️    |    ✔️    |         |
@@ -76,6 +76,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 |          SSTI           |         |         |    ✔️    |
 |  Broken Access Control  |    ✔️    |    ✔️    |         |
 |     Path Traversal      |         |         |    ✔️    |
+|     Race Condition      |     ✔️    |         |    ✔️    |
 
 
 </div>
