@@ -83,7 +83,6 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 <br>
 
-
 ## Some utilities
 
 - [ALL-MY-PAYLOADS-GROUPED](03-Extra/ALL-PAYLOADS.md)
@@ -103,9 +102,8 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Host Header Injection](01-All-Topics/Host-Header-Injection/01-CHEATSHEET+LABS.md)
 - [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
-
-- HTTP Request Smuggling
-- Race condition
+- [HTTP Request Smuggling](01-All-Topics/HTTP-Request-Smuggling/01-CHEATSHEET+LABS.md)
+- Race condition (pendiente)❗
 
 ### PHASE 2 → Elevate Privileges 
 
