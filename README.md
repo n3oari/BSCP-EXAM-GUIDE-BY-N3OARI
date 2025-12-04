@@ -104,6 +104,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
 - [HTTP Request Smuggling](01-All-Topics/HTTP-Request-Smuggling/01-CHEATSHEET+LABS.md)
 - Race condition (pendiente)❗
+- [Clickjacking](01-All-Topics/Clickjacking/01-CHEATSHEET+LABS.md)
 
 ### PHASE 2 → Elevate Privileges 
 
