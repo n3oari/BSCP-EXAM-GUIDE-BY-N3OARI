@@ -1,4 +1,4 @@
-# JWT - CHEATSHEET + LABS
+# JWT - CHEATSHEET + MOST IMPORTANT LABS
 
 - [jwt secret wordlist](https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list)
 - jwt editor (burp extension)
@@ -28,6 +28,7 @@
 
 <br>
 
+## Methodology
 
 ```bash
 - Modify the payload value.

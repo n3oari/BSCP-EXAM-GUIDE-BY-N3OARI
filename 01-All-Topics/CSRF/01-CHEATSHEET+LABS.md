@@ -1,4 +1,4 @@
-# CSRF - CHEATSHEET + LABS
+# CSRF - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 
@@ -23,7 +23,7 @@
 - [CSRF via Header Injection in Duplicated Cookie (SameSite-Strict bypass via client-side redirect)](CSRF-via-Header-Injection-SameSite-Strict-client-side-redirect.md)
 
 
-## Metodology
+## Methodology
 
 ```bash
 - Try switch POST to GET

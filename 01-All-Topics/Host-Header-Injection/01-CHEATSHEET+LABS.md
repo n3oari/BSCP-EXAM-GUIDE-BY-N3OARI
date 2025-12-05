@@ -1,4 +1,4 @@
-# Host Header Injection - CHEATSHEET + LABS
+# Host Header Injection - CHEATSHEET + MOST IMPORTANT LABS
 ## Key Terms
 
 ```bash
@@ -15,7 +15,7 @@
 - [SSRF-via-host-validation-bypass-via-connection-state-attack](SSRF-via-host-validation-bypass-via-connection-state-attack.md) ❗
 
 
-## Metodology
+## Methodology
 
 ❗ Important: To avoid wasting time during the exam, PortSwigger warns that if an SSRF exists it will always be reachable at **localhost** on **port 6566**. 
 
@@ -72,6 +72,7 @@ Host: <YOUR-LAB>:'<a href="//<EXPLOIT-SV>/?
 ```bash
 > localhost -> variations like loCalHost,LOCALHOST, etc
 > ①②⑦.⓪.⓪.⓪
+> 0x7f000001
 > 127.0.0.1  
     in decimal -> 2130706433  
     in binary  -> 01111111.00000000.00000000.00000001  

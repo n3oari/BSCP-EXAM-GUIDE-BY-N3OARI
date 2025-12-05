@@ -1,4 +1,4 @@
-# Authenthication / Brute-Force CHEATSHEET + IMPORTANT LABS
+# Authenthication / Brute-Force CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 
@@ -17,7 +17,7 @@ Burp Macros
 - [Offline-password-cracking](Offline-password-cracking.md)
 
 
- ## Metodology
+ ## Methodology
 <br>
 
 
@@ -42,7 +42,7 @@ Burp Macros
 > Forgot password? 
 ```bash
     -> Reuse temporal token 			
-	  -> X-Forwarded-Host: <exploit-sv> -> token en nuestro email
+	  -> X-Forwarded-Host: <exploit-sv> -> token in our email
 ```
 <br>
 
@@ -64,7 +64,7 @@ Burp Macros
 
 > LOGIN BLOCKED?
 ```bash
-- json? -> try an array of password = brute force en una sola request, eg -> {"username":"carlos","password":["foo1","foo2","foo3..."]} 
+- json? -> try an array of password = brute force in a single request, eg -> {"username":"carlos","password":["foo1","foo2","foo3..."]} 
 - IP based block? -> Pitchforked attack ->  X-Forwarded-For: <IP-INTRUDER+1> + <USERNAME> + <PASSWORD> 
 ```
 

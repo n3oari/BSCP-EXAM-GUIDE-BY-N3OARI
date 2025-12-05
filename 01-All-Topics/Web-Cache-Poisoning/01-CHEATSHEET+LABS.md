@@ -1,4 +1,4 @@
-# Web Cache Poisoning - CHEATSHEET + LABS
+# Web Cache Poisoning - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 

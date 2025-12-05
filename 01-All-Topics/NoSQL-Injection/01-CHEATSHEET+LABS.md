@@ -1,4 +1,4 @@
-# NoSQL Injection - CHEATSHEET + LABS
+# NoSQL Injection - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Cheat Sheet
 

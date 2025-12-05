@@ -86,7 +86,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 ## Some utilities
 
 - [ALL-MY-PAYLOADS-GROUPED](03-Extra/ALL-PAYLOADS.md)
-- [REGEX explanation (util to interpreter code)](https://www.mobzystems.com/online/explain-regular-expression/)
+- [REGEX explanation (util to interpreter code)](https://pythonium.net/regex)
 
 ## Enumeration & Web Discovery
 

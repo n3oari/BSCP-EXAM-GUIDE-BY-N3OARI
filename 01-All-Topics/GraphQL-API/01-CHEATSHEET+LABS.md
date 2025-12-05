@@ -1,4 +1,4 @@
-# GraphQL API Vulnerabilities - CHEATSHEET + LABS
+# GraphQL API Vulnerabilities - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 

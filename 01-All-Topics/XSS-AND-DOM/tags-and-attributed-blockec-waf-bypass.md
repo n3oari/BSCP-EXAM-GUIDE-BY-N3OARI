@@ -49,7 +49,7 @@ if doesn't works try url-code
 </iframe>
 ```
 
-**EXTRA -> EJEMPLO CUSTOM TAGS**
+**EXTRA -> CUSTOM TAGS EXAMPLE**
 
 POC
 ```html

@@ -1,10 +1,4 @@
-# Path Traversal - CHEATSHEET + LABS
-
-## Walkthrough - Most important labs
-
-- [1]()
-
-- [2]()
+# Path Traversal - CHEATSHEET
 
 ## CHEATSHEET
 

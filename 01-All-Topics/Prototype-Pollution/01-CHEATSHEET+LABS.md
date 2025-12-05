@@ -1,4 +1,4 @@
-# Prototype Pollution - CHEATSHEET + LABS
+# Prototype Pollution - CHEATSHEET + MOST IMPORTANT LABS
 
 - [PP2toRCE - Hacktricks](https://book.hacktricks.wiki/en/pentesting-web/deserialization/nodejs-proto-prototype-pollution/prototype-pollution-to-rce.html?highlight=pp2rce#pp2rce-via-env-vars)
 - Client side (url) ? -> XSS -> steal cookie
