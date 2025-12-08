@@ -1,5 +1,4 @@
-
-Routing-based SSRF via arbitraty host + EXTRA: absolute path
+# Routing-based SSRF via arbitraty host + EXTRA: absolute path
 
 In Burp Intruder we perform a brute-force attack against the **Host**.
 
@@ -19,7 +18,7 @@ Using that information, we can successfully trigger the SSRF:
 
 ![Screenshot3](/04-Screenshots/absolute3.png)
 
-**EXTRA LAB**
+**EXTRA LAB: Absolute Path**
 
 Below is an example from a different lab where only the Host header injection method changes — the Intruder methodology is the same.
 

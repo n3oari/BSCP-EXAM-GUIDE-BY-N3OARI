@@ -1,11 +1,5 @@
 # File Uploads - CHEATSHEET + LABS
 
-
-- [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
-- [Methodology](#methodology)
-- [Cheat Sheet](#cheat-sheet)
-
-
 ## Walkthrough - Most Important Labs
 - [upload-.htaccess](#upload-htaccess)
 - [php-code-metadadata-exiftool](#php-code-metadadata-exiftool)

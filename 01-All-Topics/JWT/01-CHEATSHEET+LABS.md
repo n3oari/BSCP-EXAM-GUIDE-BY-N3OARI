@@ -6,7 +6,7 @@
 ## Key Terms
 
 ```bash
-- JWT structure: Header (alg + typ) → Payload (claims/data) → Signature
+- JWT structure: Header (alg + typ) → Payload (claims/data) → Signature → <HEADER>.<PAYLOAD>.<SIGNATURE>
 - Algorithms:
     > symmetric  -> uses the same secret to sign and verify (e.g. HS256)
     > asymmetric -> uses a key pair: private key to sign, public key to verify (e.g. RS256)

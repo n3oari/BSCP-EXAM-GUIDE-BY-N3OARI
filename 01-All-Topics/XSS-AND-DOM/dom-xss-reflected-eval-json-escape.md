@@ -29,7 +29,7 @@ foo"foo -> foo\"foo -> foo\\"foo -> foo"foo
 Workflow:
 
 ```bash
--  -> concatenates with alert(1); it’s cleaner to use
+-  -> concatenates with alert(1);
 \  -> escapes the double quote 
 }  -> closes the JSON
 // -> comments out the rest, which in this case are the leftover " 

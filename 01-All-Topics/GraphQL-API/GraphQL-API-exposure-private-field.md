@@ -1,4 +1,4 @@
-# GraphQL API ccidental exposure of private GraphQL fields
+# GraphQL API Accidental exposure of private GraphQL fields
 
 
 ![Screenshot1](../../04-Screenshots/graphfield1.png)

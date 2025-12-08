@@ -32,7 +32,7 @@
 - [Parameter Cloaking via utm_content](parameter-cloaking.md)
 
 
-## Metodology
+## Methodology
 
 ```bash
 -- RECON -- 

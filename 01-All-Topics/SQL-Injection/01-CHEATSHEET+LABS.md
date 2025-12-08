@@ -3,7 +3,6 @@
 ## Index
 
 - [SQL INJECTION CHEATSHEET + LABS](#sql-injection-cheatsheet--labs)
-  - [Index](#index)
   - [Key Terms](#key-terms)
   - [Walkthrough - Most Important Labs](#walkthrough---most-important-labs)
   - [CHEATSHEET](#cheatsheet)
