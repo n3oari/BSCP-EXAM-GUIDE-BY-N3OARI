@@ -1,6 +1,6 @@
-# ** IN PROCESS ** README.MD  (NOVEMBER 2025)
+# ** IN PROCESS ** README.MD  (DECEMBER 2025)
 
-This wiki contains each cheatsheet along with its respective most important labs.
+This repo contains each cheatsheet along with its respective most important labs.
 
 Each topic includes its own cheatsheet/methodology, the most relevant labs, and useful resources.
 
@@ -43,46 +43,6 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
  <br>
 
-> ⚠️ This is a reference — please, always verify and research on your own.
-
-<br>
-
-<div align="center">
-  
-|        Category         | Stage 1 | Stage 2 | Stage 3 |
-| :---------------------: | :-----: | :-----: | :-----: |
-|           XSS           |    ✔️    |    ✔️    |         |
-|           DOM           |    ✔️    |    ✔️    |         |
-|          SQL Injection           |         |    ✔️    |    ✔️    |
-|          NoSQL Injection           |         |    ✔️    |    ✔️    |
-|          CSRF           |    ✔️    |    ✔️    |         |
-|          SSRF           |         |         |    ✔️    |
-|     Authentication      |    ✔️    |    ✔️    |         |
-|          OAuth          |    ✔️    |    ✔️    |         |
-|  OS Command Injection   |         |         |    ✔️    |
-|   Web Cache Poisoning   |    ✔️    |    ✔️    |         |
-|         LFI/RFI         |         |         |    ✔️    |
-|       File Upload       |    ❌    |         |    ✔️    |
-|      Clickjacking       |    ✔️    |    ✔️    |         |
-|  Host Header Injection  |    ✔️    |    ✔️    |         |
-|     Deserialization  Insecure   |    ❌    |         |    ✔️    |
-| HTTP Request Smuggling  |    ✔️    |    ✔️    |         |
-|      API - Testing      |    ✔️    |    ✔️    |         |
-|          CORS           |    ✔️    |    ✔️    |         |
-|   Prototype Pollution   |         |    ✔️    |         |
-|           JWT           |    ✔️    |    ✔️    |         |
-| GraphQL - API Endpoints |         |    ✔️    |         |
-|        XML - XXE        |    ❌    |         |    ✔️    |
-|          SSTI           |         |         |    ✔️    |
-|  Broken Access Control  |    ✔️    |    ✔️    |         |
-|     Path Traversal      |         |         |    ✔️    |
-|     Race Condition      |     ✔️    |         |    ✔️    |
-
-
-</div>
-
-<br>
-
 ## Some utilities
 
 - [ALL-MY-PAYLOADS-GROUPED](03-Extra/ALL-PAYLOADS.md)
@@ -92,7 +52,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 - Burp Scanner && Site Map && Content Discovery
 - [API testing / recon](01-All-Topics/API-testing/01-CHEATSHEET+LABS.md)
-- [Obfuscation payloads (escape bypass)](03-Extra/obfuscating-payload.md) 👁️❗
+- [Obfuscation payloads (escape bypass)](03-Extra/obfuscating-payload.md) 
 
 ### PHASE 1 → Obtain Inicial User
 
@@ -103,8 +63,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Web Cache Poisoning](01-All-Topics/Web-Cache-Poisoning/01-CHEATSHEET+LABS.md)
 - [Web Cache Deception](01-All-Topics/Web-Cache-Deception/01-CHEATSHEET+LABS.md)
 - [HTTP Request Smuggling](01-All-Topics/HTTP-Request-Smuggling/01-CHEATSHEET+LABS.md)
-- Race condition (pendiente)❗
-- [Clickjacking](01-All-Topics/Clickjacking/01-CHEATSHEET+LABS.md)
+
 
 ### PHASE 2 → Elevate Privileges 
 
@@ -128,4 +87,46 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Server Side Template Injection (SSTI)](01-All-Topics/SSTI/01-CHEATSHEET+LABS.md)
 
 
+### OTHERS (probably not on the BSCP exam, but essential for web-hacking knowledge and culture)
 
+- [Race Condition](01-All-Topics/Race-Condition/01-CHEATSHEET+LABS.md)
+- [Clickjacking](01-All-Topics/Clickjacking/01-CHEATSHEET+LABS.md)
+
+
+> ⚠️ This is a reference — please, always verify and research on your own.
+
+<br>
+
+<div align="center">
+  
+|        Category         | Stage 1 | Stage 2 | Stage 3 |
+| :---------------------: | :-----: | :-----: | :-----: |
+|           XSS           |    ✔️    |    ✔️    |         |
+|           DOM           |    ✔️    |    ✔️    |         |
+|          NoSQL Injection           |         |    ✔️    |    ✔️    |
+|          CSRF           |    ✔️    |    ✔️    |         |
+|          SSRF           |         |         |    ✔️    |
+|     Authentication      |    ✔️    |    ✔️    |         |
+|          OAuth          |    ✔️    |    ✔️    |         |
+|  OS Command Injection   |         |         |    ✔️    |
+|   Web Cache Poisoning   |    ✔️    |    ✔️    |         |
+|   Web Cache Deception   |    ✔️    |    ✔️    |         |
+|       File Upload       |    ❌    |         |    ✔️    |
+|  Host Header Injection  |    ✔️    |    ✔️    |         |
+|     Deserialization  Insecure   |    ❌    |         |    ✔️    |
+| HTTP Request Smuggling  |    ✔️    |    ✔️    |         |
+|      API - Testing      |    ✔️    |    ✔️    |         |
+|          CORS           |    ✔️    |    ✔️    |         |
+|   Prototype Pollution   |         |    ✔️    |         |
+|           JWT           |    ✔️    |    ✔️    |         |
+| GraphQL - API Endpoints |         |    ✔️    |         |
+|        XML - XXE        |    ❌    |         |    ✔️    |
+|          SSTI           |         |         |    ✔️    |
+|  Broken Access Control  |    ✔️    |    ✔️    |         |
+|     Path Traversal      |         |         |    ✔️    |
+|     Race Condition      |     ✔️    |         |    ✔️    |
+
+
+</div>
+
+<br>

@@ -1,4 +1,4 @@
-# Brute-forcing a stay-logged-in cookie (cookie easy to reproduce -> username + md5 + b64)
+# Brute-forcing a stay-logged-in cookie (cookie easy to reproduce -> hash md5 prefix + username + encode b64)
 
 In this lab, we find a functionality called **stay-logged-in**, which assigns us a cookie to keep the session open.
 In some cases this cookie is easy to reproduce:
@@ -7,9 +7,9 @@ In some cases this cookie is easy to reproduce:
 
 We perform a brute-force attack by applying the following rules in Burp Intruder to each password in the dictionary:
 
-- Prefix → username:
-
 - Hash → in this case, the password in MD5.
+
+- Prefix → username:
 
 - Encode → Base64.
   

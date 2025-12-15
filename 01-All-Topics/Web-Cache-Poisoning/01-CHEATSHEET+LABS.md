@@ -8,15 +8,6 @@
 - Cache Buster -> Used to test the cache without affecting the website’s functionality e.g -> /?cb=x
 - Unkeyed Input -> Element that does not influence the cache key (potential attack vector)
 - Cloaking Param -> Parameter/Header ignored by the cache but used by the backend eg -> /?callback=setCountryCookie&utm_content=x;callback=alert(1)
-
-- X-Forwarded-For -> Forwards the original client IP address through proxies; can be abused to influence backend logic that trusts client IP.
-- X-Forwarded-Host -> Forwards the original Host header (the hostname used by the client); can be used to craft redirects or host-based logic.
-- X-Forwarded-Scheme: nohttps -> Indicates the original scheme 
-- X-Forwarded-Proto: original protocol used by the client, typically http or https
-- Pragma: x-get-cache-key -> A request hint used to ask the server (or a diagnostic endpoint) to reveal or compute the cache key for that request.
-- Vary  Specifies which parts of the request should be included in the cache key
-- X-Cache: hit (cached) / miss (not cached) / dynamic / refresh
-
 ```
 
 ## Walkthrough - Most Important Labs

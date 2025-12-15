@@ -2,6 +2,8 @@
 
 ## CHEATSHEET
 
+> inspect images
+
 ```bash
 #null byte = \0 -> %00
 ../../../../../etc/passwd
