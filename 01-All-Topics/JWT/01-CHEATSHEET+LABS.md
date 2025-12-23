@@ -1,5 +1,6 @@
 # JWT - CHEATSHEET + MOST IMPORTANT LABS
 
+- [jwt.io (usefull debugging)](https://www.jwt.io/)
 - [jwt secret wordlist](https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list)
 - jwt editor (burp extension)
 

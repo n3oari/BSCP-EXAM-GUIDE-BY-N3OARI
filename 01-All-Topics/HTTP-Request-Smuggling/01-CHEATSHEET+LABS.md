@@ -24,7 +24,7 @@
 - [CL.TE + XSS in UserAgent to steal cookie](CL-TL-XSS-steal-cookie.md)
 
 - [H2.TE response queue poisoning](H2.T2.queue.md)
-- [HTTP/2 - CRLF injection](HTTP2-CRLF.md)
+- [HTTP/2 - CRLF injection + EXTRA](HTTP2-CRLF.md)
 
 ## Methodology
 

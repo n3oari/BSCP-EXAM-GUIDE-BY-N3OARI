@@ -1,9 +1,9 @@
 # HTB MACHINES TO PRACTICE
 
 ```
-- BANKROBER:  -> SQLI  + XSS 
-- FULCRUM: FULL XXE -> privilege ecalation out of scope
-- VALENTINE: race condition
+- BankRobber:  -> SQLI  + XSS 
+- Fulcrum: FULL XXE -> privilege ecalation out of scope
+- Valentine: race condition
 - Tenet: race condition + deserialization
 - BackendTwo: API + JWT
 - RedPanda: SSTI -> up to escalation  
@@ -14,4 +14,5 @@
 ---10---
 - CrossFite: XSS -> XSS + CSRF > privilege ecalation out of scope
 - Pollution: XXE + PROTOTYPE POLLUTION
+- Unicode: JWT + OPEN REDIRECT
 ```

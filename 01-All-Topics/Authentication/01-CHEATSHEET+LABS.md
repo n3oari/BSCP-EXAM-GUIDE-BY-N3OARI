@@ -16,6 +16,8 @@ Burp Macros
 
 - [Offline-password-cracking](Offline-password-cracking.md)
 
+- [2FA broken login (brute-force to 2fa code)](2FA-broke-login.md)
+
 
  ## Methodology
 <br>
@@ -56,7 +58,8 @@ Burp Macros
 
 > 2FA?
 ```bash
-    -> Intentar evitar la 2º verificación, ej -> 1º login + GET /my-account?username=carlos
+    -> Attempt to bypass the second verification, e.g. -> first login + GET /my-account?username=carlos
+    -> Generate 2fa code to victim and brute-force to 2fa code
     -> login1 (wiener) + login2 (send token to carlos) -> brute force mfa
 	  -> macro + brute force mfa
 ```

