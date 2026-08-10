@@ -135,4 +135,6 @@ The exam consists of **2 machines**, each with **3 phases**, and a duration of *
 
 [![Discord](https://img.shields.io/badge/Discord-n3oari-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1078444408086728839)
 
+❗I do not provide any information about exam content (NDA). Please don't ask — messages like these will be ignored. However, I'm happy to share tips, resources, and general advice about the certification process.
+
 <br>
